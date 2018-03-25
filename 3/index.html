@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"><head><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet" type="text/css"><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Blog | Brisk Bee</title><meta name="description" content="Casual rants on mobile development"><meta name="keywords" content="briskbee, haldbæk, peter haldbæk, peter haldbaek, iphone, ios, android, findantenna, dvb-t, java, mobile, development"><meta name="author" content="Peter Haldbæk"><meta name="generator" content="DocPad v6.78.6" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><header><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><div class="background"><div class="top"><a href="/">Brisk Bee</a></div><nav class="topmenu"><ul class="list-inline"><li class="active"><a href="/">BLOG</a></li><li typeof="sioc:Page" about="/pages/about/"><a href="/pages/about/" property="dc:title">About</a></li></ul></nav></div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></header><div class="container"><div class="row"><div class="col-md-2"></div><div class="col-md-8"><section id="content" class="content"><ul class="posts"><li><article id="doc" class="even post"><h1><a href="/posts/removing_all__svn_folders/">Removing all .svn folders</a></h1><div class="pubdate">Published February 13th 2012</div><div class="post-content"><p>Every now and then I need to copy a folder which is under source control. By copying the folder all source control information is copied along which needs to be removed afterwards. If the amount of folders is small this is done pretty easy manually but when we are talking larger amounts of folders doing it manually easily ends up pretty time consuming.</p>
+<p>I figured there would be a pretty easy solution for this with some nifty Linux command line magic and it didn&#39;t take long to find <a href="http://www.thelinuxblog.com/remove-all-subversion-svn-folders/">something</a> that worked:</p>
+<pre><code>&gt; find . -iname &quot;.svn&quot; | xargs rm -r $1
+
+</code></pre><p>This removes all .svn folders recursively.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/more_mobile_conferences/">More mobile conferences</a></h1><div class="pubdate">Published October 26th 2011</div><div class="post-content"><p>I just discovered some extra (Android) conferences which seem interesting. </p>
+<ul>
+<li><a href="http://uk.droidcon.com/">DroidCon</a> was recently held in London but is also held in Berlin, Amsterdam and Bukarest</li>
+<li><a href="http://www.andevcon.com/">AnDevCon</a> Nov. 6-9 in San Francisco</li>
+</ul>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/hibernate__oracle__hsqldb_and_sequences/">Hibernate, Oracle, HSQLDB and sequences</a></h1><div class="pubdate">Published September 22nd 2011</div><div class="post-content"><p>Recently I was writing some unit tests where I needed to access a database sequence for generation of unique numbers. The production environment uses Oracle while my unit tests use <a href="http://hsqldb.org/">HQSLDB</a>. The numbers from the sequence are extracted by ordinary SQL through <a href="http://www.hibernate.org/">Hibernate</a> meaning that I could not rely on specifying the database dialect since the SQL is hardcoded. The code used for extracting the numbers (in Oracle) looked something like this</p>
+<pre><code>long number =
+((BigDecimal) sessionFactory.getCurrentSession().createSQLQuery
+  (&quot;select my_seq.nextval from dual&quot;)
+  .uniqueResult()
+).longValue();
+</code></pre><p>Running this in a unit test results in a ClassCastException since HSQLDB either generates the primitive int or a BigInteger instance depending on how the sequence was created. A simple solution for this is to add a scalar to the query determining the type of the returned number.</p>
+<pre><code>long number =
+((BigDecimal) sessionFactory.getCurrentSession().createSQLQuery
+  (&quot;select my_seq.nextval as id from dual&quot;)
+  .addScalar(&quot;id&quot;, new BigDecimalType())
+  .uniqueResult()
+).longValue();
+</code></pre><p>Voila! The number is now converted to a BigDecimal by Hibernate and the ClassCastExceptions are long gone.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/mobile_conferences/">Mobile conferences</a></h1><div class="pubdate">Published August 29th 2011</div><div class="post-content"><p>Just stumbled upon some more interesting conferences. I really wanted to go to <a href="http://www.google.com/events/io/2011">Google IO</a> and/or <a href="http://developer.apple.com/wwdc/">WWDC</a> but these conferences sell out in like 2 seconds so my odds of ever going to one of these events seem slim. But there are other interesting conferences out there and here is a quick list of what I have found so far:</p>
+<ul>
+<li><a href="http://androidopen.com/android2011">Android Open</a> Oct. 9-11 in San Francisco</li>
+<li><a href="http://appdevconf.engagedigital.com/">App Conference and Hackaton</a> Oct. 26-27 in Santa Clara (not really a conference but looks fun)</li>
+</ul>
+<p>And if you feel like going to Africa why not try</p>
+<ul>
+<li><a href="http://www.mobilewebafrica.com/">Mobile Web Africa</a> Nov. 22-25 in Johannesburg, South Africa</li>
+</ul>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/nas_and_iphoto__mission_impossible_/">NAS and iPhoto, Mission Impossible?</a></h1><div class="pubdate">Published June 18th 2011</div><div class="post-content"><p>Before I got my MacBook Pro I used my old Mac Mini with Tiger installed as my primary storage for my photos (using iPhoto). I then purchased a NAS, formatted it with ext3, copied my iPhoto library to the NAS and configured my Mac Mini to use the NAS as iPhoto library instead of the library stored on the Mini itself. It worked like a charm and now my photos would also be available to my other devices on my network (phones, other computers, media renderers etc.).</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="/posts/nas_and_iphoto__mission_impossible_/iphoto.png"><img src="/posts/nas_and_iphoto__mission_impossible_/iphoto.png" alt=""></a></div>My troubles started when I added a MacBook Pro running Snow Leopard to the equation. I now wanted to use this computer as the one maintaining my photo library. At first I guessed I could use the same approach as I had done with my Mac Mini. This quickly turned out to be impossible since</p>
+<ol>
+<li>iPhoto libraries for Tiger and Snow Leopard are not compatible</li>
+<li>And apparently something happened with iPhoto in later versions since it is not possible to put the iPhoto library on an ext3-formatted disk.Formatting the NAS with something else is not a solution for me since I want to be able to support Macs, Linux and Windows with my NAS. It is worth noting that even if it was possible I believe iPhoto would become extremely slow if the photos were stored on the network (I only noticed this for the Snow Leopard version, the Tiger version did not seem to be affected by this).</li>
+</ol>
+<p>So I decided to look for a solution where:</p>
+<ul>
+<li>My photo library should be stored on my NAS</li>
+<li>The NAS is formatted with ext3</li>
+<li>The folder structure of the library should be configurable. I specifically wanted to store my photos in a structure like this: year / month / date.</li>
+<li>The export of photos from camera to computer should be done automatically (I do not want to drag images into correct folders by hand)
+I figured this could be achieved in two ways. Either by finding a way of exporting my photos directly to the NAS and then later importing these photos into iPhoto (I actually do like iPhoto I just hate the lousy support for network storage) or letting iPhoto import the photos to my MacBook Pro and then schedule a job to automatically copy the files to the NAS. I do not need to sync the Mac Mini since it is more or less retired.</li>
+</ul>
+<p><strong>Importing photos to NAS</strong>
+I first explored the possibilities given by Apple.</p>
+<p><strong>Image Capture</strong>
+Mac OS X comes with a little utility called Image Capture which exports photos from your camera to your computer. I never explored whether it supported ext3 formatted disks since you have to export the photos to your destination manually. Image Capture does support automatic export but then all your exported images will end up in the same folder. So I quickly turned to other solutions.</p>
+<p><strong>Autoimporter</strong>
+A (very) secret photo utility in Mac OS X is called Autoimporter. It is not accessible through the Applications menu so you will have to open Finder and locate the application by hand. It can be found at /System/Library/Image Capture/Support/Application/AutoImporter.app.</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="/posts/nas_and_iphoto__mission_impossible_/screen_2bshot_2b2011-06-18_2bat_2b22_51_14.png"><img src="/posts/nas_and_iphoto__mission_impossible_/screen_2bshot_2b2011-06-18_2bat_2b22_51_14.png" alt=""></a></div>
+At first this tool looked very promising. It basically (as it name suggests) imports photos automatically based on your configuration. It accepts parameters such as date, camera name, user name and sequence number. Unfortunately the date is the date of the import not the date when the picture was taken and it does not support nested folders so I turned to options offered by 3rd parties.</p>
+<p><strong>Kodak Easy Share</strong>
+Kodak has released a free photo library tool called <a href="http://www.kodak.com/ek/US/en/Consumer_Products/Organize_Print_Share/KODAK_EASYSHARE_Software_17.htm?pq-path=130&amp;pq-locale=en_US&amp;_requestid=19651">Kodak Easy Share</a>. It was really hard finding the downloadable application (and I forgot where I found it) but do not bother. It stinks. It looks horrible on a Mac and the export functionality did not support nested, configurable folders so this was not an option either.</p>
+<p><strong>digiKam</strong>
+I was a little excited to try this out since it has a very good reputation. It is open-source and runs on both Linux, Windows and Mac so I was really hoping this could solve my problems. It is not supported on Mac out of the box though and I had lots of problems intalling it but I succeeded in the end. Follow the instructions at <a href="http://www.digikam.org/">http://www.digikam.org</a>, pray and wait (it took me 2 full days for everything to compile).</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="/posts/nas_and_iphoto__mission_impossible_/digikam.png"><img src="/posts/nas_and_iphoto__mission_impossible_/digikam.png" alt=""></a></div>
+I really liked digiKam as a product. It seems very polished (not as polished as iPhoto) considering it is open-source and there were tons of options. The import from camera functionality however suffered from the same limitations as I discovered with the other tools. No support for nested, configurable folders so once more it was back to the drawing board. I was very impressed though and would seriously consider digiKam over F-Spot next time I use Linux.</p>
+<p><strong>Using iPhoto and rsync</strong>
+That was it. I gave up on finding software which could copy photos from my camera to a folder structure on my NAS ordered by year, month and date. A task so seemingly simple but apparently impossible to achieve. Instead I opted for option number two. Importing photos to my laptop using iPhoto and then synchronize the NAS with the contents on my laptop.</p>
+<p>I figured I could use rsync for that but I had some problems locating my photos in the iPhoto library. I did find some photos but I was not sure whether they were the originals or not so I decided to search Google for advice. I quickly realized that messing up with the internals of the iPhoto Library (even if it is only copying) is not the way to go. The later versions of iPhoto (pre 9 I think) started storing images in a database instead of the file system making it hard to just copy the photos to my NAS.</p>
+<p>It was about then my first revelation came. Either I use iPhoto as I am supposed to (as Steve wants me to that is) or I skip it. Messing with the internals of iPhoto would only give me headaches. I decided to continue using iPhoto but my problem was still not solved.</p>
+<p><strong>Phoshare to the rescue</strong>
+Months went by and I tried to convince myself I was happy with iPhoto as it was. And then I accidently came across a neat little utility called <a href="https://sites.google.com/site/phosharedoc/">Phoshare</a>. Phoshare lets you export photos from iPhoto (almost) exactly as you want. It does not support nested date folders but it probably supports everything else you could wish for. It also exports image metadata and it is pretty fast too.</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a href="/posts/nas_and_iphoto__mission_impossible_/36036.png"><img src="/posts/nas_and_iphoto__mission_impossible_/36036.png" alt=""></a></div>
+So at last I could breath a sigh of relief (and satisfaction). Now I use my iPhoto installation on my laptop as my main administration tool and for import of photos. After each import I run Phoshare and it synchronizes my laptop and NAS. I do not have nested date folders but I started using the iPhotos event functionality and order my photos in folders with year and event name. It makes it pretty easy to navigate from my other devices at home and it works like a charm.</p>
+<p>Finally I am done. I cannot wait to see if iMovie is up to the task of sharing my movies through my NAS (slight sarcasm might have been used here).</p>
+</div></article></li></ul><ul class="pager"><li class="previous"><a href="/2">Newer</a></li><li class="next"><a href="/4">Older</a></li></ul><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'briskbee'; // required: replace example with your forum shortname
+var disqus_identifier = 'index';
+var disqus_title = 'Blog';
+var disqus_url = 'http://briskbee.com/3';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></section></div><div class="col-md-2"></div></div></div><footer><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><ui class="list-inline"><li><a href="/pages/about">About</a></li></ui><div class="pull-right">© Brisk Bee 2018</div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></footer><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/jquery.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18789185-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>

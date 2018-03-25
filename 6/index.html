@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet" type="text/css"><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Blog | Brisk Bee</title><meta name="description" content="Casual rants on mobile development"><meta name="keywords" content="briskbee, haldbæk, peter haldbæk, peter haldbaek, iphone, ios, android, findantenna, dvb-t, java, mobile, development"><meta name="author" content="Peter Haldbæk"><meta name="generator" content="DocPad v6.78.6" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><header><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><div class="background"><div class="top"><a href="/">Brisk Bee</a></div><nav class="topmenu"><ul class="list-inline"><li class="active"><a href="/">BLOG</a></li><li typeof="sioc:Page" about="/pages/about/"><a href="/pages/about/" property="dc:title">About</a></li></ul></nav></div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></header><div class="container"><div class="row"><div class="col-md-2"></div><div class="col-md-8"><section id="content" class="content"><ul class="posts"><li><article id="doc" class="even post"><h1><a href="/posts/setting_up_a_datasource_in_jndi/">Setting up a datasource in JNDI</a></h1><div class="pubdate">Published July 26th 2010</div><div class="post-content"><p>Writing code quite often involves writing a lot of unit tests. If your tests cover isolated business logic (standard unit tests) writing tests is usually pretty easy. No big dependencies and very isolated testing. If you are writing tests involving database connections things can get a little more complex. The datasource in an application context is usually stored in JNDI so you need to initialize this yourself when writing tests. I use simple-jndi for this and this is how I do it.</p>
+<p>First you need to get the jars from <a href="http://www.osjava.org/simple-jndi/">simple-jndi</a>. If you use Maven you can also just add this to your pom.xml.</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;simple-jndi&lt;/groupId&gt;
+    &lt;artifactId&gt;simple-jndi&lt;/artifactId&gt;
+    &lt;version&gt;0.11.4.1&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre><p>Initialization of the datasource is done by creating the context and adding the datasource to the context. The context can be defined in the file system (by using the <code>SimpleContextFactory</code>) or you can just store it in memory (by using the <code>MemoryContextFactory</code>). In this example I initialize a datasource for the <a href="http://hsqldb.org/">HSQLDB</a> database, store it in memory and make the context available for all occurrences of the initial contexts by setting the system property <code>org.osjava.sj.jndi.shared</code> to true.</p>
+<pre><code>import javax.naming.Context;
+import javax.naming.InitialContext;
+import org.hsqldb.jdbc.JDBCDataSource;
+
+...
+
+// Create initial context
+System.setProperty(Context.INITIAL_CONTEXT_FACTORY, &quot;org.osjava.sj.memory.MemoryContextFactory&quot;);
+System.setProperty(&quot;org.osjava.sj.jndi.shared&quot;, &quot;true&quot;);
+InitialContext ic = new InitialContext();
+
+ic.createSubcontext(&quot;java:/comp/env/jdbc&quot;);
+
+// Construct DataSource
+JDBCDataSource ds = new JDBCDataSource();
+ds.setDatabase(&quot;jdbc:hsqldb:hsql://localhost/xdb&quot;);
+ds.setUser(&quot;SA&quot;);
+ds.setPassword(&quot;&quot;);
+
+// Put datasource in JNDI context
+ic.bind(&quot;java:/comp/env/jdbc/myDS&quot;, ds);
+</code></pre><p>This creates a HSQLDB datasource in the context <code>java:/comp/env/jdbc/myDS</code>. The datasource can be retrieved from the code by looking it up in the context like this.</p>
+<pre><code>InitialContext ic = new InitialContext();
+ds = (DataSource)ic.lookup(&quot;java:/comp/env/jdbc/myDS&quot;);
+</code></pre><p>It is as easy as that. Now you can access your database via JNDI.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/android_and_xml_parsers/">Android and XML parsers</a></h1><div class="pubdate">Published July 1st 2010</div><div class="post-content"><p>My first baby steps into the world of Android development has me started with writing a classic RSS feed application. I started out looking into basic UI and when that was done I focused on how to import a feed into Android. While searching for answers I came across <a href="http://www.ibm.com/developerworks/opensource/library/x-android/index.html">this article</a> on how to read a RSS feed with Android. It explains the different possibilities for parsing the returned XML in a very straight-forward manner and I highly recommend reading the piece. It is a really good read also if you just need to brush up your XML parsing skills on the Java platform.</p>
+<p><img src="/posts/android_and_xml_parsers/androids.gif" alt=""></p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/more_conferences/">More conferences</a></h1><div class="pubdate">Published June 30th 2010</div><div class="post-content"><p>Recently I have been looking more into the mobile platform (mainly Android) and have discovered a whole new set of conferences which all of a sudden seem really interesting. These are</p>
+<ul>
+<li><a href="http://code.google.com/events/io/">Google I/O</a>, May, San Francisco</li>
+<li><a href="http://developer.apple.com/wwdc/">Apple Worldwide Developers Conference</a>, June, San Francisco</li>
+</ul>
+<p>The Google I/O conference looks like a must and I really hope I get the chance to participate. The Apple conference has a broader audience as it is not only targeting the iPhone but all things related to Apple so this conference does not get me too excited.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/using_java_visualvm_with_jboss_as_5_1/">Using Java VisualVM with JBoss AS 5.1</a></h1><div class="pubdate">Published June 29th 2010</div><div class="post-content"><p><a href="https://visualvm.dev.java.net/">Java VisualVM</a> is a nice little tool for monitoring any Java application. I used it for monitoring a JBoss AS 5.1 server and had to add some system properties to the run.sh/run.bat file before it would let me connect. The system properties are</p>
+<pre><code># Enabling JMX for remote monitoring using port 1234
+JAVA_OPTS=&quot;$JAVA_OPTS -Dcom.sun.management.jmxremote.port=1234&quot;
+JAVA_OPTS=&quot;$JAVA_OPTS -Dcom.sun.management.jmxremote.authenticate=false&quot;
+JAVA_OPTS=&quot;$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false&quot;
+</code></pre><p>Start the server, start VisualVM and connect to the server either by clicking on the JBoss server (by PID) if VisualVM and the server is running on the same machine or by specifying the server as a remote host (by JMX).</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/cpu_spikes_on_jboss_as_5_1/">CPU spikes on JBoss AS 5.1</a></h1><div class="pubdate">Published June 29th 2010</div><div class="post-content"><p>While deploying a pretty simple web application on JBoss AS 5.1 (using the default profile) I noticed some weird cyclic CPU spikes even without ANY load on the server. It would start right after the server was started and the spikes would use ~40% of the CPU. Not exactly satisfying. I did the usual trip around the good, old web and quickly found out that the administration console in JBoss AS 5.x would create these hiccups. I deleted the administration console and saw CPU utilization drop to ~10%. That is what I call improvement.</p>
+<p>While searching the web I found <a href="http://community.jboss.org/wiki/JBoss5xTuningSlimming">this little piece</a> on how to optimize JBoss AS 5.x. And yes, it does include removal of the administration console as well.</p>
+</div></article></li></ul><ul class="pager"><li class="previous"><a href="/5">Newer</a></li><li class="next"><a href="/7">Older</a></li></ul><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'briskbee'; // required: replace example with your forum shortname
+var disqus_identifier = 'index';
+var disqus_title = 'Blog';
+var disqus_url = 'http://briskbee.com/6';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></section></div><div class="col-md-2"></div></div></div><footer><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><ui class="list-inline"><li><a href="/pages/about">About</a></li></ui><div class="pull-right">© Brisk Bee 2018</div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></footer><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/jquery.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18789185-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>

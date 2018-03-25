@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet" type="text/css"><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Blog | Brisk Bee</title><meta name="description" content="Casual rants on mobile development"><meta name="keywords" content="briskbee, haldbæk, peter haldbæk, peter haldbaek, iphone, ios, android, findantenna, dvb-t, java, mobile, development"><meta name="author" content="Peter Haldbæk"><meta name="generator" content="DocPad v6.78.6" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><header><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><div class="background"><div class="top"><a href="/">Brisk Bee</a></div><nav class="topmenu"><ul class="list-inline"><li class="active"><a href="/">BLOG</a></li><li typeof="sioc:Page" about="/pages/about/"><a href="/pages/about/" property="dc:title">About</a></li></ul></nav></div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></header><div class="container"><div class="row"><div class="col-md-2"></div><div class="col-md-8"><section id="content" class="content"><ul class="posts"><li><article id="doc" class="even post"><h1><a href="/posts/mockito__static_imports_and_eclipse/">Mockito, static imports and Eclipse</a></h1><div class="pubdate">Published March 26th 2011</div><div class="post-content"><p>I recently started using <a href="http://mockito.org/">Mockito</a> as a mocking framework. Mockito makes heavy use of static imports which by default in Eclipse are not accessible through code completion. It is possible to use the Mockito methods by accessing them through their class by writing <code>Mockito.when</code> but this would quickly clutter your code with a lot of Mockito references. Code completion has been around for ages so not having it feels like coding in Notepad or vi. Fortunately I have found out that it is actually possible and quite easy to configure Eclipse to add the static imports which is a great relief.</p>
+<p>Simply open the Preferences in Eclipse and go to the menu item Java -&gt; Editor -&gt; Content Assist -&gt; Favorites and press the button New Type.... Enter the text <code>org.mockito.Mockito</code> and press OK. Now you have all static methods on the Mockito class available to you through code completion.</p>
+<p><img src="/posts/mockito__static_imports_and_eclipse/screen_2bshot_2b2011-03-26_2bat_2b2_17_02_2bpm.png" alt="Eclipse screenshot"></p>
+<p>Other useful Mockito classes to add are <code>org.mockito.Matchers</code> and <code>org.mockito.BDDMockito</code> (if you are into <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a>).</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/concrete_-_my_very_own_android_orm/">Concrete - My very own Android ORM</a></h1><div class="pubdate">Published October 28th 2010</div><div class="post-content"><p>I finally decided to write my own ORM for the Android platform simply because I thought this was really needed. The only option I found was the <a href="http://www.activeandroid.com">Active Android</a> framework which is not open source in any way. So I figured it was time to code my own framework. So here is <a href="http://github.com/peterhaldbaek/concrete">Concrete</a>! The framework is still very rudimentary to say the least but if I find the time I think it will work out pretty nicely. I have been influenced by Hibernate, the Active Record pattern and of course Active Android. In the current state it does not support relations (yikes!) but I am working on this so stay tuned.</p>
+<p>So how does the framework work? It is pretty easy. Let&#39;s say you have a table called <code>Foo</code> with the string <code>myText</code>, the integer <code>myNumber</code> and the date <code>myDate</code>. All you have to do to get basic CRUD operations on this table is to create this object:</p>
+<pre><code>package com.briskbee.concrete.example.record;
+
+import java.util.Date;
+import android.content.Context;
+import com.briskbee.concrete.Record;
+
+public class Foo extends Record&lt;Foo&gt; {
+  public String myText;
+  public int myNumber;
+  public Date myDate;
+
+  public Foo(Context context) {
+    super(context);
+  }
+}
+</code></pre><p>Please note all variables of the class are public. This is necessary for the framework to be able to recognize them as properties of the class (and columns of the table). So now we have an object let&#39;s use it. Let&#39;s say we are inside an activity and want to create a row in the table foo.</p>
+<pre><code>Foo foo = new Foo(this);
+foo.myText = &quot;some text&quot;;
+foo.myNumber = 3;
+foo.myDate = new Date();
+foo.save();
+</code></pre><p>That is basically all there is to it. No need for writing tedious CRUD code anymore. It is as DRY as it gets. Retrieving, updating and deleting records are just as easy:</p>
+<pre><code>// Load foo
+Foo foo = new Foo(this);
+foo.load(1);
+
+// Update foo
+foo.myText = &quot;some other text&quot;;
+foo.update();
+
+// Delete foo
+foo.delete();
+</code></pre><p>That is pretty neat in my book. The framework relies heavily on reflection and I have no clue how this performs. The code runs faster if you are writing all the hardwiring by hand but it is also pretty boring and very un-DRY.</p>
+<p>As a developer you still need to have your own implementation of <code>SQLiteOpenHelper</code> which creates the tables for you. I am planning to implement some automatic stuff for this too but fixing relations is a higher priority at the moment.</p>
+<h2 id="update-08-01-2014">Update 08.01.2014</h2>
+<p>Active Android is now open source so my little framework has become somewhat obsolete.</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/paid_android_apps_finally_in_denmark/">Paid Android apps finally in Denmark</a></h1><div class="pubdate">Published October 1st 2010</div><div class="post-content"><p>Today <a href="http://android-developers.blogspot.com/2010/09/more-countries-more-sellers-more-buyers.html">Google announced</a> they would introduce paid apps in the Danish version of Android Market and 17 other markets as well. It was announced in an email sent to all Android developers.</p>
+<blockquote>
+<p>Hello,</p>
+<p>We&#39;re writing to inform you about some changes to Android Market that require your attention.</p>
+<p>Effective today, developers from 20 additional countries (Argentina, Australia, Belgium, Brazil, Canada, Denmark, Finland, Hong Kong, Ireland, Israel, Mexico, New Zealand, Norway, Portugal, Russia, Singapore, South Korea, Sweden, Switzerland and Taiwan) can now sell paid apps on Android Market. Over the next 2 weeks, users from 18 new countries (Argentina, Brazil, Belgium, Czech Republic, Denmark, Finland, Hong Kong, India, Ireland, Israel, Mexico, Norway, Poland, Portugal, Russia, Singapore, Sweden, and Taiwan) will be able to purchase paid apps from Android Market.</p>
+<p>Please see the related post at Android Developer Blog here:
+<a href="http://android-developers.blogspot.com/">http://android-developers.blogspot.com/</a></p>
+<p>We encourage you to visit the Android Market developer console at <a href="http://market.android.com/publish">http://market.android.com/publish</a> to make the necessary adjustments.</p>
+<p>Thanks, and we look forward to continue working with you on Android Market.</p>
+<p>Sincerely,
+The Android Market TeamThis comes as a very pleasant surprise to me as I was slowly giving up hope that this would change anytime soon.</p>
+</blockquote>
+<p><img src="/posts/paid_android_apps_finally_in_denmark/market-bag-intl4.png" alt=""></p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/speeding_up_unit_tests_using_in-memory_database/">Speeding up unit tests using in-memory database</a></h1><div class="pubdate">Published September 27th 2010</div><div class="post-content"><p>I am a big fan of test-driven principles but have been on projects where running the full unit test suite would last 2-3 hours simply because writing to and reading from the database would slow everything down. This normally lead to optimizations such as only creating test data once having the unfortunate side effect of making unit tests dependent on each other (one unit test may change some data used in another unit test). It can also lead to random behavior making the test pass one time and then not the other simply because unit tests are not necessarily run in the same sequence every time.</p>
+<p>Using an in-memory database can improve time spent on running unit tests significantly. In this article I will discuss the pros and cons of this approach and show how to do this.</p>
+<p>Before you start using in-memory databases for unit testing some basic questions should be asked.</p>
+<ol>
+<li>Does your database support in-memory use at all?
+If it does there is no excuse for not using the in-memory database instead of the physical one. Databases I know of who currently support in-memory versions are <a href="http://www.sqlite.org/inmemorydb.html">SQLite</a>, <a href="http://hsqldb.org/">HSQLDB</a> and <a href="http://www.oracle.com/technetwork/database/timesten/overview/index.html">Oracle TimesTen</a>.</li>
+<li>Do you use non ANSI SQL?</li>
+<li>Do you use triggers?</li>
+<li>Do you use some form of procedural SQL (PL/SQL and the likes)?</li>
+</ol>
+<p>If your database does not support in-memory usage and you can answer yes to one (or more) of the questions above it might turn out you cannot use in-memory databases but there are ways to solve this. Lets go into detail.</p>
+<h2 id="do-you-use-non-ansi-sql-">Do you use non ANSI SQL?</h2>
+<p>If your SQL is non ANSI SQL you will have a harder time switching between database vendors since the code now depends on vendor-specific SQL. One such example could be Oracles old definition of joins. In Oracle 8i and older versions outer left joins where defined like this</p>
+<pre><code>SELECT * FROM emp, dept WHERE emp.deptno = dept.deptno(+)
+</code></pre><p>Whereas the newer version (9i and onward) also supports the ANSI SQL definition</p>
+<pre><code>SELECT * FROM emp LEFT OUTER JOIN dept on emp.deptno = dept.deptno
+</code></pre><p>Please be aware that the old definition of left outer (and other) joins are still supported by Oracle meaning that the non ANSI SQL definition of joins still exist in a lot of places (I used to use them myself until I realized this).</p>
+<p>If you use Hibernate this is (probably) not a problem since you can just change the database dialect of Hibernate when running your unit tests. But this requires that you do not make any direct use of (non ANSI) SQL and my experience is that this is seldom the case. There is always some special problem which is to hard to express via Hibernate and then you end up writing some SQL instead.</p>
+<h2 id="do-you-use-triggers-">Do you use triggers?</h2>
+<p>If you decide to use the in-memory database of HSQLDB (I did) and you have triggers in your (production) database you need to have something similar in your in-memory database. HSQLDB <a href="http://hsqldb.org/doc/2.0/guide/triggers-chapt.html">supports this</a> in its own peculiar way but it is actually quite neat in a testing environment because the trigger itself is a little piece of Java code that is executed. So you need to implement the triggers in the test database as well.</p>
+<h2 id="do-you-use-some-form-of-procedural-sql-pl-sql-and-the-likes-">Do you use some form of procedural SQL (PL/SQL and the likes)?</h2>
+<p>If your application makes heavy use of procedural SQL in-memory databases are probably not the best fit unless your production database supports this out of the box. Because you will probably have to rewrite all of your procedures to do so. If it is only a matter of converting one or two procedures an in-memory database like HSQLDB supports this like triggers above. It is just a matter of writing your procedure as some Java code and register it as a procedure in HSQLDB.</p>
+<h2 id="using-an-in-memory-database">Using an in-memory database</h2>
+<p>I was working on a project where unit testing was abandoned since running the tests were simply not possible. Not because it took a lot of time but simply because the tests would fail when they were being run together. Database connections were not released quickly enough giving all kinds of problems. So instead of trying to fix a problem I had been trying to solve for years I ended up redefining the whole testing framework making use of an in-memory database. We were using Oracle 10g and the database itself was pretty simple so it made a lot of sense to make the switch. Using HSQLDB in-memory is really easy. I implemented a base test class all unit tests extend from. This base test class is responsible for creating the proper JNDI context containing the HSQLDB data source.</p>
+<pre><code>import javax.naming.InitialContext;
+import org.hsqldb.jdbc.JDBCDataSource;
+
+...
+
+// Construct DataSource
+JDBCDataSource ds = new JDBCDataSource();
+ds.setDatabase(&quot;jdbc:hsqldb:mem:myDB&quot;);
+ds.setUser(&quot;SA&quot;);
+ds.setPassword(&quot;&quot;);
+
+// Put datasource in JNDI context
+InitialContext ic = new InitialContext();
+ic.bind(&quot;java:/comp/env/jdbc/myDS&quot;, ds);
+</code></pre><p>Before each test the database is created with schema, tables and test data. Since everything resides in memory initialization is exceptionally fast compared to a physical database. I never made any direct measurements to compare the two approaches but I know I never wait for a test to finish. It just does in an instant. That is such a relief!</p>
+<p>The Hibernate configuration for the test classes must also be changed to use the HSQLDB dialect. Edit this in your hibernate.cfg.xml file:</p>
+<pre><code>&lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.HSQLDialect&lt;/property&gt;
+</code></pre><p>Now you are set and you are ready to run your tests using an in-memory database.</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/paid_apps_expanding__denmark_next_/">Paid apps expanding, Denmark next?</a></h1><div class="pubdate">Published September 27th 2010</div><div class="post-content"><p>Wishful thinking indeed but yesterday Google informed Android developers that paid apps are coming to new markets soon. No details were released on which countries Google would add but there have been <a href="http://www.androidcentral.com/google-begins-testing-paid-market-apps-india">rumors</a> that India is being added anytime soon. No need to tell I am hoping for Denmark to be added but do not expect this since it is such a small market compared to countries not yet on the list (China, Brazil etc.).
+Here is the mail from Google:</p>
+<blockquote>
+<p>Hello,</p>
+<p>We&#39;re writing to inform you about some changes to Android Market that require your attention.</p>
+<p>Over the next few weeks, we’ll be adding paid apps support for additional countries.  If you have selected to publish your paid apps to all locations and intend to support all new locations as we expand the number of supported countries for paid apps, you don’t have to do anything.  If you have selected to publish your paid apps to all locations but intend to only target the currently supported 14 countries, please update your location selections to target these specific countries.</p>
+<p>Please look for follow-up emails when we introduce paid apps support for specific additional countries in the coming weeks.  At that time, you’ll have the option to target these specific countries.</p>
+<p>Thanks, and we look forward to continue working with you on Android
+Market.</p>
+<p>Sincerely,
+The Android Market Team</p>
+</blockquote>
+</div></article></li></ul><ul class="pager"><li class="previous"><a href="/3">Newer</a></li><li class="next"><a href="/5">Older</a></li></ul><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'briskbee'; // required: replace example with your forum shortname
+var disqus_identifier = 'index';
+var disqus_title = 'Blog';
+var disqus_url = 'http://briskbee.com/4';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></section></div><div class="col-md-2"></div></div></div><footer><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><ui class="list-inline"><li><a href="/pages/about">About</a></li></ui><div class="pull-right">© Brisk Bee 2018</div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></footer><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/jquery.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18789185-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>

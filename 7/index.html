@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet" type="text/css"><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Blog | Brisk Bee</title><meta name="description" content="Casual rants on mobile development"><meta name="keywords" content="briskbee, haldbæk, peter haldbæk, peter haldbaek, iphone, ios, android, findantenna, dvb-t, java, mobile, development"><meta name="author" content="Peter Haldbæk"><meta name="generator" content="DocPad v6.78.6" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><header><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><div class="background"><div class="top"><a href="/">Brisk Bee</a></div><nav class="topmenu"><ul class="list-inline"><li class="active"><a href="/">BLOG</a></li><li typeof="sioc:Page" about="/pages/about/"><a href="/pages/about/" property="dc:title">About</a></li></ul></nav></div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></header><div class="container"><div class="row"><div class="col-md-2"></div><div class="col-md-8"><section id="content" class="content"><ul class="posts"><li><article id="doc" class="even post"><h1><a href="/posts/eclipse_and_jboss_as_5_1_with_minimal_configuration/">Eclipse and JBoss AS 5.1 with minimal configuration</a></h1><div class="pubdate">Published June 25th 2010</div><div class="post-content"><p>As I explained yesterday I managed to improve startup times of my JBoss AS 5.1 server dramatically by fiddling a little with the web profile provided by Red Hat. It did however give me some problems when I wanted to start/stop/deploy my web project from Eclipse since this all of a sudden did not work anymore. I decided to fix this and this is what I did.</p>
+<h2 id="use-the-jrmp-invoker-proxy">Use the JRMP invoker proxy</h2>
+<p>Either copy the <code>jmx-invoker-service.xml</code> from the default profile into your <code>deploy</code> directory of your profile or apply these changes to your <code>jmx-invoker-service.xml</code> file.</p>
+<p>Change</p>
+<pre><code>&lt;mbean code=&quot;org.jboss.invocation.jrmp.server.JRMPProxyFactory&quot; name=&quot;jboss.jmx:type=adaptor,name=Invoker,protocol=http, service=proxyFactory&quot;&gt;
+   &lt;!-- Use the HTTP Invoker from conf/jboss-service.xml --&gt;
+   &lt;depends optional-attribute-name=&quot;InvokerName&quot;&gt;
+      jboss:service=invoker,type=http
+   &lt;/depends&gt;
+   ...
+&lt;/mbean&gt;
+</code></pre><p>to</p>
+<pre><code>&lt;mbean code=&quot;org.jboss.invocation.jrmp.server.JRMPProxyFactory&quot; name=&quot;jboss.jmx:type=adaptor,name=Invoker,protocol=jrmp, service=proxyFactory&quot;&gt;
+   &lt;!-- Use the standard JRMPInvoker from conf/jboss-service.xml --&gt;
+   &lt;depends optional-attribute-name=&quot;InvokerName&quot;&gt;
+      jboss:service=invoker,type=jrmp
+   &lt;/depends&gt;
+   ...
+&lt;/mbean&gt;
+</code></pre><p>and</p>
+<pre><code>&lt;mbean code=&quot;org.jboss.jmx.connector.invoker.MBeanProxyRemote&quot; name=&quot;jboss.jmx:type=adaptor,name=MBeanProxyRemote,protocol=jrmp&quot;&gt;
+   &lt;depends optional-attribute-name=&quot;MBeanServerConnection&quot;&gt;
+      jboss.jmx:type=adaptor,name=Invoker,protocol=http,service=proxyFactory
+   &lt;/depends&gt;
+&lt;/mbean&gt;
+</code></pre><p>to</p>
+<pre><code>&lt;mbean code=&quot;org.jboss.jmx.connector.invoker.MBeanProxyRemote&quot; name=&quot;jboss.jmx:type=adaptor,name=MBeanProxyRemote,protocol=jrmp&quot;&gt;
+   &lt;depends optional-attribute-name=&quot;MBeanServerConnection&quot;&gt;
+      jboss.jmx:type=adaptor,name=Invoker,protocol=jrmp,service=proxyFactory
+   &lt;/depends&gt;
+&lt;/mbean&gt;
+</code></pre><h2 id="enable-the-listening-port-for-the-jnp-service">Enable the listening port for the JNP service</h2>
+<p>Edit the MBean NamingService in the <code>jboss-service.xml</code> file found in the <code>conf</code> directory.</p>
+<p>Change</p>
+<pre><code>&lt;attribute name=&quot;Port&quot;&gt;-1&lt;/attribute&gt;
+</code></pre><p>to</p>
+<pre><code>&lt;attribute name=&quot;Port&quot;&gt;
+   &lt;value-factory bean=&quot;ServiceBindingManager&quot; method=&quot;getIntBinding&quot;&gt;
+      &lt;parameter&gt;jboss:service=Naming&lt;/parameter&gt;
+      &lt;parameter&gt;Port&lt;/parameter&gt;
+   &lt;/value-factory&gt;
+&lt;/attribute&gt;
+</code></pre><p>Voila! You should now be able to start, stop and deploy your web apps in Eclipse.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/minimal_jboss_as_5_1_configuration/">Minimal JBoss AS 5.1 configuration</a></h1><div class="pubdate">Published June 24th 2010</div><div class="post-content"><p>When I deploy applications on the JBoss AS platform I normally just use the default profile provided by Red Hat. JBoss AS 5.1 is however horrendously slow when starting up so I decided to look into the other (lesser) profiles to see if this would speed things up a bit. I am running a standard web application (packaged as a .war file) based on JSF 1.2 (Sun RI) and Hibernate which accesses an Oracle database.</p>
+<p>JBoss AS 5.1 comes with 5 profiles; all, default, minimal, standard and web. I decided to use the web profile since this one (supposedly) supports jdbc and web applications out of the box. As you might guess this was not my experience at first hand since the profile would not recognize my datasource. It came up short with this error message:</p>
+<pre><code>16:03:47,718 ERROR [ProfileServiceBootstrap] Failed to load profile: Summary of incomplete deployments (SEE PREVIOUS ERRORS FOR DETAILS):
+
+DEPLOYMENTS MISSING DEPENDENCIES:
+  Deployment &quot;jboss.jca:name=jdbc/mydatasource,service=DataSourceBinding&quot; is missing the following dependencies:
+    Dependency &quot;jboss:service=invoker,type=jrmp&quot; (should be in state &quot;Create&quot;, but is actually in state &quot;** NOT FOUND Depends on &#39;jboss:service=invoker,type=jrmp&#39; **&quot;)
+
+DEPLOYMENTS IN ERROR:
+  Deployment &quot;jboss:service=invoker,type=jrmp&quot; is in error due to the following reason(s): ** NOT FOUND Depends on &#39;jboss:service=invoker,type=jrmp&#39; **
+</code></pre><p>The solution to this was to copy the <code>legacy-invokers-service.xml</code> file from the default profile directory into the web profile directory and everything deployed nicely and worked as expected. The end result? Before startup would take 54 seconds, now it is down to 12 seconds. And this could probably be optimized more by removing additional unused elements (like support for Hypersonic databases).</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/nas_continued/">NAS continued</a></h1><div class="pubdate">Published June 10th 2010</div><div class="post-content"><p>I recently did a little writeup on some NAS products in the budget price range. I finally decided to buy a ReadyNAS RND2000 with 2 1 TB Seagate harddrives but bailed out in the last minute only to reconsider why I needed a NAS. I basically just wanted to have a common fileserver for all my computers at home and I wanted it to be really power efficient. I believe the ReadyNAS server is pretty power efficient but I have an old Mac Mini G4 in the basement which does not do anything at the moment. I remember I was pretty excited about the power consumption of the Mac when I first got it (20W work, close to nothing when idle) so I have decided to turn the Mac into my NAS/fileserver. I do not need RAID just a proper backup plan.</p>
+<p><img src="/posts/nas_continued/Mac_mini_Intel_Core_transparent.png" alt=""></p>
+<p>So now I am in the process of upgrading the hardware of the Mac. I am upgrading the memory from 512Mb to 1Gb and upgrading the harddrive from 80Gb to 320 Gb. A sideeffect to all this is that I can get rid of my old noisy Ubuntu box in the basement as well which I use as a regular desktop computer. The Mini will handle that from now on. I really do not know why I never thought of this before.</p>
+<p>The only concern I have with the Mac Mini now is that I want it to go to sleep when it is not in use and wake up when someone tries to access data stored on it. My first experience with this was that when it first went into sleep mode I had to press a key on the keyboard of the Mac itself, which is not very convenient when it is in the basement. I could just configure it to not to go into sleep mode at all but that kind of defies the purpose of using it as a (power-efficient) NAS.</p>
+<p>I stumbled across this little tip on the net. If you execute this Python script on any computer trying to access the Mac it should wake up from its sleep mode. The MAC address of the Mac (no pun intended) needs to be specified in the scripts (in this case it is set to 00 11 22 33 44 55).</p>
+<pre><code>#!/usr/bin/env python
+
+import socket;
+
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
+s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1);
+
+s.sendto(&#39;\xff&#39;*6+&#39;\x00\x11\x22\x33\x44\x55&#39;*16, (&#39;192.168.0.255&#39;, 9));
+</code></pre><p>The only problem with this is that you have to run the script when you want to access something on the Mac. I am planning to put all my music on the Mac and then access it from devices which may not be able to execute such a script (like the Logitech Squeezebox Duet). I have not quite figured out how to solve this yet but since it is not a problem right now (I do not own a Squeezebox) I will take care of this later. The good thing with this script is that you can run it on any platform supporting Python. I have successfully tested it with both Linux (Ubuntu 8.04) and Windows XP.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/muanlai_-_a_true_gem_in_khao_lak/">Muanlai - A true gem in Khao Lak</a></h1><div class="pubdate">Published May 28th 2010</div><div class="post-content"><p>Traveling to Khao Lak from the south you will pass a little restaurant called <a href="http://www.baankrating.com/KhaoLak/restaurant-muanlai.aspx">Muanlai</a> about 1 km after the entrance to the <a href="http://www.dnp.go.th/parkreserve/asp/style1/default.asp?npid=47&amp;lg=2">Khao Lak-Lam Ru National Park</a>. The restaurant sits on the hillside with unspoiled and spectacular views of the Khao Lak beach. It is the perfect spot for watching the sun set or just relax. It does not hurt either that the food is great and pretty cheap too. It is located a bit outside of Khao Lak so if you are staying in Khao Lak you either need to walk 2-3 kms or grab a tuk-tuk. It is within walking distance of most of the resorts in the southern part of Khao Lak but since it is situated in the opposite direction of Khao Lak it is easy to overlook this marvelous place.</p>
+<p><img src="/posts/muanlai_-_a_true_gem_in_khao_lak/img_4016.jpg" alt=""></p>
+<p>So what are you waiting for? Go. Now.</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/going_nas/">Going NAS</a></h1><div class="pubdate">Published May 27th 2010</div><div class="post-content"><p><a href="http://en.wikipedia.org/wiki/Network-attached_storage">Network-attached storage</a> (or just NAS) is all the rage at the moment (or has been for some time now). The amount of computers in households are rising and the need for accessing documents and data from more than just one device is becoming increasingly popular. Instead of storing documents and data on all these computers the NAS will provide the household with a centralized document and data store making it easier to access and share data within the household but also easier to implement efficient and consistent backup procedures.</p>
+<p>I have been looking at buying a NAS for some time but initially thought my HTPC build could serve as a NAS. Unfortunately power efficiency has not been satisfactory for my HTPC (it uses something like 60 W idle). Furthermore I have come to the conclusion I am better of separating the two things, so my HTPC does not end up as a multipurpose server. The wear and tear on harddrives in a HTPC is bigger compared to a NAS server since the HTPC will make many write operations compared to the NAS.</p>
+<p>My main requirement for the NAS is that it has to be power-efficient. Other (not-so-important) requirements are price, <a href="http://en.wikipedia.org/wiki/Squeezebox_Server">SqueezeBox</a> server capability and maybe support for RAID.</p>
+<p>I have looked at products from <a href="http://www.qnap.com/">QNAP</a>, <a href="http://www.synology.com/">Synology</a> and <a href="http://www.netgear.com/">Netgear</a> for no other reason than products from these companies seem to be the most popular choices today. Other products from other manufacturers may excel. The NAS products I have looked at are</p>
+<ul>
+<li><a href="http://www.qnap.com/pro_detail_feature.asp?p_id=92">QNAP TS-109 Pro II</a> (TS-109)</li>
+<li><a href="http://www.qnap.com/pro_detail_feature.asp?p_id=112">QNAP TS-119 Turbo NAS</a> (TS-119)</li>
+<li><a href="http://www.qnap.com/pro_detail_feature.asp?p_id=135">QNAP TS-210 Turbo NAS</a> (TS-210)</li>
+<li><a href="http://www.synology.com/enu/products/DS110j/index.php">Synology DS110j</a> (DS110j)</li>
+<li><a href="http://www.synology.com/enu/products/DS210j/index.php">Synology DS210j</a> (DS210j)</li>
+<li><a href="http://www.netgear.com/Products/Storage/ReadyNASDuo/RND2000.aspx">Netgear ReadyNAS Duo RND2000</a> (RND2000)</li>
+</ul>
+<p>None of these products come with preinstalled hard drives. They are all able to run SqueezeBox server.</p>
+<p>Here is a quick comparison of the specifications I find most interesting:</p>
+<table class="table">
+  <thead>
+    <tr><th></th>   <th>TS-109</th>   <th>TS-119</th>  <th>TS-210</th><th>DS110j</th><th>DS210j</th><th>RND2000</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>CPU (MHz)</th>   <td>500</td>   <td><em>1200</em></td><td>800</td><td>800</td><td>800</td><td>?</td>  </tr>
+    <tr><th>Memory (Mb)</th>   <td>256</td>   <td><em>512</em></td><td>256</td><td>128</td><td>128</td><td>256</td>  </tr>
+    <tr><th>Work (W)</th>   <td>14.4</td>   <td>_13_</td><td>14<sup>1</sup></td><td>19</td><td>25</td><td>35<sup>2</sup></td>  </tr>
+    <tr><th>Sleep (W)</th>   <td>6.6</td>   <td>_5_</td><td>11</td><td>9</td><td>10</td><td>12</td>  </tr>
+    <tr><th>Number of bays</th>   <td>1</td>   <td>1</td><td>2</td><td>1</td><td>2</td><td>2</td>  </tr>
+    <tr><th>Fan</th>   <td>No</td>   <td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>  </tr>
+    <tr><th>Price (DKK)</th>   <td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=502266">1289</a></td>   <td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=504530">1764</a></td><td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=672103">1653</a></td><td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=706442"><em>900</em></a></td><td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=701126">1319</a></td><td><a href="http://www.edbpriser.dk/Product/Details.aspx?pid=483837">1260</a></td>  </tr>
+  </tbody>
+  <tfoot>
+    <tr><td colspan="7"><sup>1</sup> I am highly skeptical this number is correct.</td></tr>
+    <tr><td colspan="7"><sup>2</sup> With 2 500 Gb disks.</td></tr>
+  </tfoot>
+</table>
+
+<p>The best performers are shown in italics in the table. It is pretty obvious that the QNAP TS-119 Turbo NAS performs well compared to the other products. In all areas except for the price it is ahead of it competitors. Unfortunately it is the most expensive option as well. The Netgear ReadyNAS Duo RND2000 looks like a pretty nice product as well. I have seen many nice reviews on the box and would be really tempted at investing in this product if it had not been for the poor results concerning power consumption. Power consumption for idle mode is satisfactory though and one might argue that this is the most important part when it comes to power consumption.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Right now I am torn between the QNAP TS-109 Pro II and the ReadyNAS server. The QNAP server has great power consumption figures but costs the same as the ReadyNAS server which seems to be the more professional product. Both products have received good reviews and would be good buys. But you would be getting a more elegant RAID1 solution by buying the ReadyNAS server (you need to connect an external hard drive for the QNAP server). The ReadyNAS can furthermore be upgraded by adding more memory, I am not sure the QNAP server offers the same. The QNAP server on the other hand is very power efficient.</p>
+</div></article></li></ul><ul class="pager"><li class="previous"><a href="/6">Newer</a></li><li class="next"><a href="/8">Older</a></li></ul><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'briskbee'; // required: replace example with your forum shortname
+var disqus_identifier = 'index';
+var disqus_title = 'Blog';
+var disqus_url = 'http://briskbee.com/7';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></section></div><div class="col-md-2"></div></div></div><footer><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><ui class="list-inline"><li><a href="/pages/about">About</a></li></ui><div class="pull-right">© Brisk Bee 2018</div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></footer><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/jquery.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18789185-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>

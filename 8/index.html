@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700" rel="stylesheet" type="text/css"><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Blog | Brisk Bee</title><meta name="description" content="Casual rants on mobile development"><meta name="keywords" content="briskbee, haldbæk, peter haldbæk, peter haldbaek, iphone, ios, android, findantenna, dvb-t, java, mobile, development"><meta name="author" content="Peter Haldbæk"><meta name="generator" content="DocPad v6.78.6" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><header><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><div class="background"><div class="top"><a href="/">Brisk Bee</a></div><nav class="topmenu"><ul class="list-inline"><li class="active"><a href="/">BLOG</a></li><li typeof="sioc:Page" about="/pages/about/"><a href="/pages/about/" property="dc:title">About</a></li></ul></nav></div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></header><div class="container"><div class="row"><div class="col-md-2"></div><div class="col-md-8"><section id="content" class="content"><ul class="posts"><li><article id="doc" class="even post"><h1><a href="/posts/pimp_my_blog/">Pimp my blog</a></h1><div class="pubdate">Published April 17th 2010</div><div class="post-content"><p>I just decided to upgrade the layout of the blog a little and I am very pleased with the results so far. Improvements made are:</p>
+<ul>
+<li>New layout provided by a free template made by <a href="http://www.andreasviklund.com/">Andreas Virklund</a> and modified to fit into the world of Blogger by <a href="http://www.geckoandfly.com/blogspot-templates/">Gecko and Fly</a>.</li>
+<li>Syntax highlighting with <a href="http://alexgorbatchev.com/wiki/SyntaxHighlighter">SyntaxHighlighter</a>.</li>
+<li>Image display with <a href="http://www.dolem.com/lytebox/">lytebox</a> (initially I wanted to use <a href="http://www.huddletogether.com/projects/lightbox2/">lightbox</a> but I could not make it work in Blogger).</li>
+</ul>
+<p>Still some minor pieces missing but I am more or less done for now.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/my_take_on_building_a_htpc/">My take on building a HTPC</a></h1><div class="pubdate">Published April 15th 2010</div><div class="post-content"><p>After months (years?) of tinkering with my HTPC build I am finally at a point where I can say that I am done. There is always a lot of extra things to do with such a versatile box but my main goal was to build my own DVR and that is where I am at now. If I ever want to build such a system again (not sure about that) this is what I would consider:</p>
+<h2 id="mac-mini">Mac Mini</h2>
+<p>While I was building the HTPC I decided to buy a used <a href="http://en.wikipedia.org/wiki/Mac_mini">Mac Mini</a> just for the fun of it. I bought the first generation Mac Mini which comes with a 1.42 GHz PowerPC processor and ATI Radeon 9200 graphics card. I wanted to test out programming on the Mac platform (haven&#39;t done that yet), maybe try it as a frontend to the HTPC I built (haven&#39;t done that yet) or video editing for my digital camcorder (tried it, works perfectly). I was blown away with the thing on more levels and I can&#39;t believe I haven&#39;t paid more attentions to Macs before (the price tag is probably a good explanation).
+Here is what I really like about the Mac Mini platform:</p>
+<ul>
+<li>It looks great (100% <a href="http://en.wikipedia.org/wiki/Woman_acceptance_factor">WAF</a> proof (if not more!))</li>
+<li>Really silent (my Mac Mini does have a fan but it is very silent).</li>
+<li>Power efficent (when idle I could merely measure any draw, in use 25W)</li>
+</ul>
+<p>I could easily imagine using the Mac Mini as both frontend and backend because of the low power use and sleek design. My own HTPC box runs at 60W when in use but I never really got any luck with different modes of suspend (it is a real pain to setup in Linux) so I could not test idle modes in my HTPC build.
+The Mac Mini can be equipped with a TV tuner from for instance <a href="http://www.elgato.com/">Elgato</a> and then you should be ready to go. The drawbacks of the Mac Mini are:</p>
+<ul>
+<li>Hard to change hard disk or memory as the case is not assembled with screws. It can be done though, take a look <a href="http://www.youtube.com/watch?v=ynQKYTaJ_zA&amp;feature=player_embedded#%21">here</a>.</li>
+<li>Older models (1st generation) comes without infra red controller. If you want a remote control for one of these models you need to buy a USB controller for this.</li>
+<li>Pricey</li>
+</ul>
+<h2 id="distributions">Distributions</h2>
+<p>I ended up trying out three different distributions of MythTV:</p>
+<ul>
+<li><a href="http://www.linhes.org/">KnoppMyth/LinHES</a></li>
+<li><a href="http://www.mythbuntu.org/">Mythbuntu</a></li>
+<li><a href="http://www.mythdora.com/">MythDora</a></li>
+</ul>
+<p>I ended up using Mythbuntu (9.10) since they were the first to support MythTV 0.22 (important to me since I wanted to use VDPAU). I do not regret this decision since Mythbuntu has a large following and lots of committed developers. I was used to Ubuntu beforehand which made the decision easier. I did however like LinHES a lot since this distribution seems to be more polished than the other two. Everything seems more tested and ready than I experienced with Mythbuntu but Mythbuntu won in the end since I was more familiar with Ubuntu and I found it easier to setup my remote control with this distribution. I never gave MythDora a fair shot and just installed it out of curiosity but since it did not solve any of the problems I had initially with the two other distributions (getting my Hauppauge to work satisfactory) I uninstalled it again. One thing that worried me about LinHES was that it was handled by one person alone. I wonder what would happen to the distribution if he decided to do something else.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So if I ever was to build a HTPC again I would probably pick up a Mac Mini (one of the newer with nVidia graphics) and equip it with a TV tuner and remote control. I would run Leopard or Snow Leopard as OS and install <a href="http://www.mythtv.org/wiki/Installing_MythTV_on_an_Intel_Mac_Mini_using_Ubuntu">MythTV</a> on top of that. I would also install <a href="http://www.plexapp.com/">Plex</a> which looks really nice. I haven&#39;t been able to test it myself since I only run Tiger on my Mac Mini.</p>
+<h2 id="update-june-30th-2010">Update June 30th 2010</h2>
+<p>After changing the hard drive of the Mac I realized it actually has a fan! Sorry for the confusion. It is still pretty silent though.</p>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/conferences/">Conferences</a></h1><div class="pubdate">Published January 16th 2010</div><div class="post-content"><p>I do not participate in a whole lot of conferences but I do like to go if I find something worth attending. One conference I really appreciated was the <a href="http://www.coloradosoftwaresummit.com/">Colorado Software Summit</a> (CSS) which unfortunately has closed down. There was not one thing I did not like about this conference (ok, maybe the weather could be a little warmer ;) ). Great location (up in the mountains), great speakers, a small dedicated crowd of attendants, a chance to see the Broncos live and lots of other things. I only participated twice, I wish I had gone more often. This conference is surely missed not only by me.</p>
+<p>Hopefully someone will start something similar but sometimes change is not a bad thing after all. So now on to the big question: Which conference should I attend next? I did some research and have found these alternatives which do not look too bad:</p>
+<ul>
+<li><a href="http://www.devoxx.com/">Devoxx</a>, Antwerp, November</li>
+<li><a href="http://www.therichwebexperience.com/">The Rich Web Experience</a>, Orlando, December</li>
+<li><a href="http://javasymposium.techtarget.com/">TheServerSide Java Symposium</a>, Las Vegas, March</li>
+</ul>
+<p>I could include <a href="http://java.sun.com/javaone">JavaOne</a> on the list but I have been there (once, in the glory dot com days of the early 2000s) and liked CSS so much better. But going to San Francisco is not a bad thing at all so I might change my mind. Right now I am tempted most by the Rich Web Experience in Orlando. If you know of other interesting conferences please let me know! I am mostly looking for Java or Web 2.0 &#39;ish conferences.</p>
+</div></article></li><li><article id="doc" class="odd post"><h1><a href="/posts/my_htpc_build/">My HTPC build</a></h1><div class="pubdate">Published January 15th 2010</div><div class="post-content"><p>I ended up buying these components for my HTPC</p>
+<ul>
+<li><strong>Motherboard</strong> AsRock K10N78FULLHD-HSLI R3.0</li>
+<li><strong>CPU</strong> AMD Athlon 64 X2 Dual-Core 4850e</li>
+<li><strong>GPU</strong> ASUS EN8400GS SILENT HTP 512M</li>
+<li><strong>Memory</strong> HyperX 2GB 800MHZ DDR2 NON-ECC</li>
+<li><strong>HDD</strong> Western Digital Scorpio/500GB 2.5&quot; SATAII 5400rpm 8MB encapsulated in Scythe Quiet Drive 2.5&quot;</li>
+<li><strong>DVD</strong> Pioneer DVR-216DBK, SATA, Black</li>
+<li><strong>Tuner</strong> Hauppauge Nova-T 500</li>
+<li><strong>Case</strong> Antec New Solution NSK2480</li>
+</ul>
+<p>I am very pleased with the components so far. I needed to add a graphics card since the motherboard does not have any TV-out and I am still stuck with my old television. Although flat screens are getting increasingly cheaper I am pretty happy with my television and feel I get better value by waiting for the standards to stabilize a bit (DVB-T2 anyone?). So I needed TV-out for now.</p>
+<p>I toyed around with undervolting the build and got really nice results. I&#39;ll might post my experiences later.</p>
+<p>I might add the following items to the build:</p>
+<ul>
+<li>Scythe Ninja Mini CPU heatsink (the default heatsink is a bit noisy and since everything else is so nice and silent it feels stupid not to add this)</li>
+<li>Pico PSU</li>
+<li>Logitech DiNovo Mini keyboard</li>
+<li>Some cheap USB gamepads</li>
+</ul>
+</div></article></li><li><article id="doc" class="even post"><h1><a href="/posts/motherboards/">Motherboards</a></h1><div class="pubdate">Published June 15th 2009</div><div class="post-content"><p>At first I was pretty confident about going with the Asus M3N78-VM motherboard since it seemed like the perfect choice. Power consumption was a concern though and it is reportedly not possible to undervolt the motherboard so I decided to take a look at some more options before buying anything.</p>
+<p>My requirements are:</p>
+<ul>
+<li>Compatible with AMD 4850e CPU</li>
+<li>HDMI</li>
+<li>Onboard NVidia graphics, at least 8200</li>
+<li>Power efficientThe motherboards I found so far are:</li>
+</ul>
+<h2 id="asus-m3n78-vm">Asus M3N78-VM</h2>
+<ul>
+<li>Pros: Reliable motherboard (proven vendor), NVidia 8200</li>
+<li>Cons: No undervolting</li>
+</ul>
+<h2 id="asrock-k10n78fullhd-hsli-r3-0">ASRock K10N78FullHD-hSLI R3.0</h2>
+<ul>
+<li>Pros: Power efficent, supports undervolting and does it apparently pretty well, NVidia 8200, cheap (408 kr)</li>
+<li>Cons: None so far :)</li>
+</ul>
+</div></article></li></ul><ul class="pager"><li class="previous"><a href="/7">Newer</a></li><li class="next"><a href="/9">Older</a></li></ul><script type="text/javascript">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'briskbee'; // required: replace example with your forum shortname
+var disqus_identifier = 'index';
+var disqus_title = 'Blog';
+var disqus_url = 'http://briskbee.com/8';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script></section></div><div class="col-md-2"></div></div></div><footer><div class="container"><div class="row"><div class="col-md-2 visible-md visible-lg"></div><div class="col-md-8"><ui class="list-inline"><li><a href="/pages/about">About</a></li></ui><div class="pull-right">© Brisk Bee 2018</div></div><div class="col-md-2 visible-md visible-lg"></div></div></div></footer><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/jquery.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18789185-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>
