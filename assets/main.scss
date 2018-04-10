@@ -1,0 +1,100 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Colors
+
+// Bright green theme http://dribbble.com/shots/142167-creative-drop?list=searches&tag=color
+// grey #959EA8
+// dark blue #2C3A4E
+// dust green #9BCE8B
+// bright green #1BE86E
+// pale green #A3FB66
+// petroleum blue #54958A
+// yellow #C1FC29
+// green #37DB67
+
+$color-grey: #959EA8;
+$color-dark-blue: #2D2A4A;
+$color-dust-green: #0C7B81;
+$color-bright-green: #00FE66;
+$color-pale-green: #00AA6E;
+$color-petroleum-blue: #2A4764;
+$color-yellow: #BEFE54;
+$color-green: #37DB67;
+
+
+// Overrides
+
+$base-font-family: "PT Serif", Arial, sans-serif !default;
+$base-font-size:   18px !default;
+$base-font-weight: 400 !default;
+
+$header-font-family: "PT Sans", Arial, sans-serif !default;
+$header-font-size:   18px !default;
+$header-font-weight: 700 !default;
+
+$brand-color: $color-green;
+
+
+
+@import "minima";
+
+
+
+// New styles
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $header-font-weight;
+  font-family: $header-font-family;
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  background-color: $color-petroleum-blue;
+  border-top: 5px solid $color-dark-blue;
+  border-bottom: 0px;
+}
+
+.site-title {
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+
+  &,
+  &:visited {
+    color: white;
+  }
+}
+
+.site-nav {
+
+  .page-link {
+    color: white;
+  }
+}
+
+.page-link {
+  font-family: $header-font-family;
+}
+
+.post-meta {
+  font-family: $header-font-family;
+  font-size: 14px;
+}
+
+.pager {
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 10px;
+    margin: 5px;
+  }
+}
