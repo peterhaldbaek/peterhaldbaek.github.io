@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+redirect_from: '/pages/about/'
 ---
 
 My name is Peter Haldbæk and this is my little blogging space. I do web for a living and mobile for fun so these are
