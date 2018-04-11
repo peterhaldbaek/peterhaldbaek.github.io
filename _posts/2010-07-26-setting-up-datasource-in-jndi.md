@@ -3,7 +3,6 @@ title: Setting up a datasource in JNDI
 layout: post
 tags: ["java","test","jndi"]
 date: 2010-07-26
-commentsUrl: http://www.briskbee.com/2010/07/setting-up-datasource-outside-of.html#comment-form
 redirect_from: "/posts/setting_up_a_datasource_in_jndi/"
 ---
 
