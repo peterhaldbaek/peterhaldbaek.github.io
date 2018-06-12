@@ -20,7 +20,7 @@
           -->
           
         {% for my_page in site.pages %}
-          {% if my_page.title and my_page.autogen == nil and my_page.title != site.title %}
+          {% if my_page.title and my_page.autogen == nil and my_page.title != site.title and my_page.show_in_menu %}
           <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
           {% endif %}
         {% endfor %}
