@@ -64,12 +64,12 @@ DR1 og DR3 kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på t
 
 # Ottendedelsfinaler
 
-| Kanal | Tid        | Kamp        |
-|:-----:|-----------:|-------------|
-| DR1   | 30.6 16:00 | 1C - 2D (1)
-| DR1   | 30.6 20:00 | 1A - 2B (2)
-| SVT   | 1.7 16:00  | 1B - 2A (3)
-| DR1   | 1.7 20:00  | 1D - 2C (4)
+| Kanal | Tid        | Kamp                       |
+|:-----:|-----------:|----------------------------|
+| DR1   | 30.6 16:00 | Frankrig - Argentina (1)
+| DR1   | 30.6 20:00 | Uruguay - Portugal (2)
+| SVT   | 1.7 16:00  | Spanien - Rusland (3)
+| DR1   | 1.7 20:00  | Kroatien - **Danmark** (4)
 | DR1   | 2.7 16:00  | 1E - 2F (5)
 | SVT   | 2.7 20:00  | 1G - 2H (6)
 | SVT   | 3.7 16:00  | 1F - 2E (7)
