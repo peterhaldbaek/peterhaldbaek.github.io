@@ -70,10 +70,10 @@ DR1 og DR3 kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på t
 | DR1   | 30.6 20:00 | Uruguay - Portugal (2)
 | SVT   | 1.7 16:00  | Spanien - Rusland (3)
 | DR1   | 1.7 20:00  | Kroatien - **Danmark** (4)
-| DR1   | 2.7 16:00  | 1E - 2F (5)
-| SVT   | 2.7 20:00  | 1G - 2H (6)
-| SVT   | 3.7 16:00  | 1F - 2E (7)
-| TV4   | 3.7 20:00  | 1H - 2G (8)
+| DR1   | 2.7 16:00  | Brasilien - Mexico (5)
+| SVT   | 2.7 20:00  | Belgien - Japan (6)
+| SVT   | 3.7 16:00  | Sverige - Schweiz (7)
+| TV4   | 3.7 20:00  | Colombia - England (8)
 
 # Kvartfinaler
 
