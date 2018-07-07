@@ -80,16 +80,16 @@ DR1 og DR3 kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på t
 | Kanal | Tid       | Kamp                   |
 |:-----:|----------:|------------------------|
 | SVT   | 6.7 16:00 | Frankrig - Uruguay (1)
-| TV4   | 6.7 20:00 | Vinder 5 - Vinder 6 (2)
-| DR1   | 7.7 16:00 | Vinder 7 - Vinder 8 (3)
+| TV4   | 6.7 20:00 | Brasilien - Belgien (2)
+| DR1   | 7.7 16:00 | Sverige - England (3)
 | DR1   | 7.7 20:00 | Rusland - Kroatien (4)
 
 # Semifinaler
 
 | Kanal | Tid        | Kamp                |
 |:-----:|-----------:|---------------------|
-| SVT   | 10.7 20:00 | Vinder 1 - Vinder 2
-| DR1   | 11.7 20:00 | Vinder 3 - Vinder 4
+| SVT   | 10.7 20:00 | Frankrig - Belgien
+| DR1   | 11.7 20:00 | England - Kroatien
 
 # Finaler
 
