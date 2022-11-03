@@ -86,12 +86,12 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 
 | Kanal | Tid         | Kamp                |
 |:-----:|------------:|---------------------|
-|       | 13.11 20:00 | Vinder 1 - Vinder 2
-|       | 14.11 20:00 | Vinder 3 - Vinder 4
+|       | 13.12 20:00 | Vinder 1 - Vinder 2
+|       | 14.12 20:00 | Vinder 3 - Vinder 4
 
 # Finaler
 
 | Kanal | Tid         | Kamp                |
 |:-----:|------------:|---------------------|
-|       | 17.11 16:00 | Bronzekamp
-|       | 18.11 16:00 | Finale
+|       | 17.12 16:00 | Bronzekamp
+|       | 18.12 16:00 | Finale
