@@ -64,10 +64,10 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 
 | Kanal | Tid        | Kamp                       |
 |:-----:|-----------:|----------------------------|
-|       | 3.12 16:00 | Holland - 2B (1)
-|       | 3.12 20:00 | 1C - 2D (2)
-|       | 4.12 16:00 | 1D - 2C (3)
-|       | 4.12 20:00 | 1B - Senegal (4)
+|       | 3.12 16:00 | Holland - USA (1)
+|       | 3.12 20:00 | Argentina - Australien (2)
+|       | 4.12 16:00 | Frankrig - Polen (3)
+|       | 4.12 20:00 | England - Senegal (4)
 |       | 5.12 16:00 | 1E - 2F (5)
 |       | 5.12 20:00 | 1G - 2H (6)
 |       | 6.12 16:00 | 1F - 2E (7)
