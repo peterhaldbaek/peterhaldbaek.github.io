@@ -64,34 +64,34 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 
 | Kanal | Tid        | Kamp                       |
 |:-----:|-----------:|----------------------------|
-|       | 3.12 16:00 | Holland - USA (1)
-|       | 3.12 20:00 | Argentina - Australien (2)
-|       | 4.12 16:00 | Frankrig - Polen (3)
-|       | 4.12 20:00 | England - Senegal (4)
-|       | 5.12 16:00 | 1E - 2F (5)
-|       | 5.12 20:00 | 1G - 2H (6)
-|       | 6.12 16:00 | 1F - 2E (7)
-|       | 6.12 20:00 | 1H - 2G (8)
+| SVT1  | 3.12 16:00 | Holland - USA (1)
+| DR1   | 3.12 20:00 | Argentina - Australien (2)
+| DR1   | 4.12 16:00 | Frankrig - Polen (3)
+| SVT1  | 4.12 20:00 | England - Senegal (4)
+| SVT1  | 5.12 16:00 | Japan - Kroatien (5)
+| DR1   | 5.12 20:00 | Brasilien - Sydkorea (6)
+| DR1   | 6.12 16:00 | Marokko - Spanien (7)
+| TV4   | 6.12 20:00 | Portugal - Schweiz (8)
 
 # Kvartfinaler
 
 | Kanal | Tid         | Kamp                    |
 |:-----:|------------:|-------------------------|
-|       |  9.12 16:00 | Vinder 5 - Vinder 6 (1)
-|       |  9.12 20:00 | Vinder 1 - Vinder 2 (2)
-|       | 10.12 16:00 | Vinder 7 - Vinder 8 (3)
-|       | 10.12 20:00 | Vinder 3 - Vinder 4 (4)
+| DR1   |  9.12 16:00 | Vinder 5 - Vinder 6 (1)
+| SVT1  |  9.12 20:00 | Holland - Argentina (2)
+| TV4   | 10.12 16:00 | Vinder 7 - Vinder 8 (3)
+| DR1   | 10.12 20:00 | Frankrig - England (4)
 
 # Semifinaler
 
 | Kanal | Tid         | Kamp                |
 |:-----:|------------:|---------------------|
-|       | 13.12 20:00 | Vinder 1 - Vinder 2
+| DR1   | 13.12 20:00 | Vinder 1 - Vinder 2
 |       | 14.12 20:00 | Vinder 3 - Vinder 4
 
 # Finaler
 
 | Kanal | Tid         | Kamp                |
 |:-----:|------------:|---------------------|
-|       | 17.12 16:00 | Bronzekamp
-|       | 18.12 16:00 | Finale
+| SVT1  | 17.12 16:00 | Bronzekamp
+| DR1   | 18.12 16:00 | Finale
