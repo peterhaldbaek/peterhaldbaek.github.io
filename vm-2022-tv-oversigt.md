@@ -75,11 +75,11 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 
 # Kvartfinaler
 
-| Kanal | Tid         | Kamp                    |
-|:-----:|------------:|-------------------------|
-| DR1   |  9.12 16:00 | Vinder 5 - Vinder 6 (1)
+| Kanal | Tid         | Kamp                     |
+|:-----:|------------:|--------------------------|
+| DR1   |  9.12 16:00 | Kroatien - Brasilien (1)
 | SVT1  |  9.12 20:00 | Holland - Argentina (2)
-| TV4   | 10.12 16:00 | Vinder 7 - Vinder 8 (3)
+| TV4   | 10.12 16:00 | Marokko - Portugal (3)
 | DR1   | 10.12 20:00 | Frankrig - England (4)
 
 # Semifinaler
@@ -87,7 +87,7 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 | Kanal | Tid         | Kamp                |
 |:-----:|------------:|---------------------|
 | DR1   | 13.12 20:00 | Vinder 1 - Vinder 2
-|       | 14.12 20:00 | Vinder 3 - Vinder 4
+| TV4   | 14.12 20:00 | Vinder 3 - Vinder 4
 
 # Finaler
 
