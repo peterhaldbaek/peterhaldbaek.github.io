@@ -84,14 +84,14 @@ DR kan nås med en stueantenne, mens SVT og TV4 kræver en antenne på taget ind
 
 # Semifinaler
 
-| Kanal | Tid         | Kamp                |
-|:-----:|------------:|---------------------|
-| DR1   | 13.12 20:00 | Vinder 1 - Vinder 2
-| TV4   | 14.12 20:00 | Vinder 3 - Vinder 4
+| Kanal | Tid         | Kamp                 |
+|:-----:|------------:|----------------------|
+| DR1   | 13.12 20:00 | Kroatien - Argentina
+| TV4   | 14.12 20:00 | Marokko - Frankrig
 
 # Finaler
 
-| Kanal | Tid         | Kamp                |
-|:-----:|------------:|---------------------|
-| SVT1  | 17.12 16:00 | Bronzekamp
-| DR1   | 18.12 16:00 | Finale
+| Kanal | Tid         | Kamp                 |
+|:-----:|------------:|----------------------|
+| SVT1  | 17.12 16:00 | Kroatien - Marokko
+| DR1   | 18.12 16:00 | Argentina - Frankrig
