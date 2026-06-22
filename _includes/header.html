@@ -41,6 +41,15 @@
         var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (e) {}
+
+        // Keep the giscus comments iframe in sync with the site theme.
+        var frame = document.querySelector('iframe.giscus-frame');
+        if (frame && frame.contentWindow) {
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: next } } },
+            'https://giscus.app'
+          );
+        }
       });
     })();
   </script>

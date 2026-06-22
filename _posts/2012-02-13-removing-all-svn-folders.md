@@ -18,3 +18,16 @@ I figured there would be a pretty easy solution for this with some nifty Linux c
 ```
 
 This removes all .svn folders recursively.
+
+<section class="archived-comments" markdown="0">
+  <h3>From the original comments</h3>
+  <p>Preserved from the old Disqus thread when the blog moved to giscus.</p>
+  <blockquote>
+    <cite>Brian Harris · 2012-03-10</cite>
+    FYI there is also <code>svn export</code> which accomplishes this in some (but not all) cases. Cheers.
+  </blockquote>
+  <blockquote>
+    <cite>Peter Haldbæk · 2012-08-12</cite>
+    Thanks, I wasn't aware of that.
+  </blockquote>
+</section>
