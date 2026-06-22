@@ -456,8 +456,21 @@ pre code { background: transparent; border: 0; padding: 0; color: var(--fg-dim);
   margin: 0;
   padding: 0;
 }
-.social-media-list li { margin-bottom: 4px; }
-.svg-icon { fill: var(--muted); vertical-align: middle; }
+.contact-list li { margin-bottom: 4px; }
+.social-media-list li { margin-bottom: 6px; }
+.social-media-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: var(--muted);
+  vertical-align: middle;
+}
+.social-media-list li a:hover .svg-icon { fill: var(--pink); }
 
 /* =========================================================================
    Responsive — mobile nav
