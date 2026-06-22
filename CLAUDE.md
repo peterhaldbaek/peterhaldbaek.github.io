@@ -62,9 +62,10 @@ file here to override it rather than editing the gem.
   (reading `localStorage.theme`, defaulting to dark) to avoid a flash; the toggle
   button and its click handler live in `_includes/header.html` and persist the choice
   to `localStorage`.
-- **Fonts** load from Google Fonts in `_includes/head.html`: `Fraunces` (italic
-  display / headings), `Space Grotesk` (body), `JetBrains Mono` (code, eyebrows,
-  meta, tags). Code blocks are clean bordered panels — no colored accent stripe.
+- **Fonts** load from Google Fonts in `_includes/head.html`: `Spectral` (display /
+  headings), `Work Sans` (body), `JetBrains Mono` (code, eyebrows, meta, tags). The
+  display/body pairing is chosen for editorial heritage over the AI-default look.
+  Code blocks are clean bordered panels — no colored accent stripe.
 - **Tags.** Posts may set `tags: [a, b, c]` in front matter; they render as pills on
   the home feed (`_layouts/home.html`) and the post header (`_layouts/post.html`).
   Posts without tags simply show none — safe to adopt gradually.
