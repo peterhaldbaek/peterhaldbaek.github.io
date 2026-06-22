@@ -1,0 +1,28 @@
+{%- if jekyll.environment == "production" -%}
+<section class="comments" aria-label="Comments">
+  <h2 class="comments__heading">Comments</h2>
+  <div id="giscus-container"></div>
+  <script>
+    (function () {
+      var theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      var s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.setAttribute('data-repo', 'peterhaldbaek/peterhaldbaek.github.io');
+      s.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkzNjQ2MzMxNw==');
+      s.setAttribute('data-category', 'Announcements');
+      s.setAttribute('data-category-id', 'DIC_kwDOAixi1c4C_p6D');
+      s.setAttribute('data-mapping', 'pathname');
+      s.setAttribute('data-strict', '0');
+      s.setAttribute('data-reactions-enabled', '1');
+      s.setAttribute('data-emit-metadata', '0');
+      s.setAttribute('data-input-position', 'bottom');
+      s.setAttribute('data-theme', theme);
+      s.setAttribute('data-lang', 'en');
+      s.setAttribute('data-loading', 'lazy');
+      s.crossOrigin = 'anonymous';
+      s.async = true;
+      document.getElementById('giscus-container').appendChild(s);
+    })();
+  </script>
+</section>
+{%- endif -%}

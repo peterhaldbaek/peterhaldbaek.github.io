@@ -53,3 +53,24 @@ ds = (DataSource)ic.lookup("java:/comp/env/jdbc/myDS");
 ```
 
 It is as easy as that. Now you can access your database via JNDI.
+
+<section class="archived-comments" markdown="0">
+  <h3>From the original comments</h3>
+  <p>Preserved from the old Disqus thread when the blog moved to giscus.</p>
+  <blockquote>
+    <cite>Michael Prescott · 2013-04-08</cite>
+    Yes, extremely useful. Simple-JNDI's advice to use jndi.properties is terrible as it forces you to figure out how to reconcile it with whatever else you've got going on with Maven. This is much, much nicer. Thanks!
+  </blockquote>
+  <blockquote>
+    <cite>Holger Thurow · 2017-01-15</cite>
+    Simple-JNDI is not under active development anymore. Because I found some issues concerning shared contexts (especially using datasources), I decided to branch the original project and add some new features. There is now a 0.12.0 you can find here: <a href="https://github.com/h-thurow/Simple-JNDI">github.com/h-thurow/Simple-JNDI</a>.
+  </blockquote>
+  <blockquote>
+    <cite>Bowei Ma · 2017-12-10</cite>
+    Do you make enough tests on the latest version? I'm looking for a JNDI implementation now.
+  </blockquote>
+  <blockquote>
+    <cite>Holger Thurow · 2017-12-10</cite>
+    You can inspect all tests in <a href="https://github.com/h-thurow/Simple-JNDI">github.com/h-thurow/Simple-JNDI</a>. There are about 180 tests. The JNDI specification is not fully implemented, but seems to satisfy common requirements as there are no open bugs. There is also an alternative with <a href="https://github.com/h-thurow/TomcatJNDI">TomcatJNDI</a> that offers a full-fledged JNDI implementation. Which one to choose depends on your needs and preferences.
+  </blockquote>
+</section>

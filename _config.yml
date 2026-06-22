@@ -48,8 +48,7 @@ defaults:
     values:
       author: "Peter Haldbæk"
 
-disqus:
-    shortname: briskbee
+# Comments are handled by giscus (GitHub Discussions); see _includes/giscus_comments.html
 
 paginate: 10
 paginate_path: "/page/:num/"
