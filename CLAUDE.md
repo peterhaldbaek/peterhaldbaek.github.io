@@ -18,7 +18,7 @@ bundle exec jekyll serve --drafts   # also render _drafts/
 bundle exec jekyll build    # one-off build into _site/ (gitignored)
 ```
 
-There is no test, lint, or CI step — pushing to `master` is what deploys (GitHub
+There is no test, lint, or CI step — pushing to `main` is what deploys (GitHub
 Pages builds the site server-side). Note `_config.yml` is *not* hot-reloaded; restart
 `serve` after editing it.
 
