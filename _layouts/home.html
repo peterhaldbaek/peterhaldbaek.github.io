@@ -3,29 +3,44 @@ layout: default
 ---
 <div class="home">
 
+  {%- if paginator.page == nil or paginator.page == 1 -%}
+  <section class="hero">
+    <p class="hero__eyebrow">A developer's notebook · since 2008</p>
+    <h1 class="hero__title">Small <span>experiments</span>,<br>shipped in public.</h1>
+    <p class="hero__lead">Mobile, web and backend war stories — and lately, a lot of notes on building with AI. Written by Peter Haldbæk, kept honest and kept brief.</p>
+  </section>
+  {%- endif -%}
+
   {{ content }}
 
   {%- if paginator.posts.size > 0 -%}
+    <p class="feed-label">Latest</p>
+    <hr class="neon-rule">
+
     <ul class="post-list">
       {%- for post in paginator.posts -%}
-      <li>
+      <li class="post-item">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
+        <span class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></span>
+        <h3 class="post-item__title">
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          <div class="post-item__excerpt">{{ post.excerpt }}</div>
+        {%- endif -%}
+        {%- if post.tags.size > 0 -%}
+          <ul class="tags">
+            {%- for tag in post.tags -%}
+            <li class="tag">{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
 
-    <!-- 
-      Showing buttons to move to the next and to the previous list of posts (pager buttons).
-    -->
     {% if paginator.total_pages > 1 %}
     <ul class="pager">
         {% if paginator.previous_page %}

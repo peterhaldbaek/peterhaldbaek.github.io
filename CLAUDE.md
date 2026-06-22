@@ -41,11 +41,35 @@ Pages builds the site server-side). Note `_config.yml` is *not* hot-reloaded; re
 
 ## Theme overrides
 
-The site uses the gem-based `minima` theme, so most layouts/styles live inside the
-gem, not this repo. Files here override the gem by matching its path:
-`_layouts/home.html`, `_includes/header.html`, `_includes/disqus_comments.html`, and
-`assets/main.scss`. When something looks "missing," it's coming from the `minima` gem
-— add a same-named file here to override it rather than editing the gem.
+The site is built on the gem-based `minima` theme, but ships a custom dark-first
+look called **Pollen** (neon nectar-pink + honey accents on a plum-ink background).
+The override files here are what produce that look; many other layouts/styles still
+live inside the gem. Files here override the gem by matching its path:
+`_layouts/home.html`, `_layouts/post.html`, `_includes/head.html`,
+`_includes/header.html`, `_includes/disqus_comments.html`, and `assets/main.scss`.
+When something looks "missing," it's coming from the `minima` gem — add a same-named
+file here to override it rather than editing the gem.
+
+### Pollen theme details
+
+- **`assets/main.scss` is self-contained** — it does *not* `@import "minima"`. All
+  styling (base, header, hero, post feed, post page, code, footer, mobile nav) lives
+  here, driven by CSS custom properties. Editing minima variables does nothing; edit
+  the tokens at the top of this file.
+- **Dark/light.** Theme is chosen by the `data-theme` attribute on `<html>`. Tokens
+  are defined for `[data-theme="dark"]` (the default) and `[data-theme="light"]`. An
+  inline script in `_includes/head.html` sets the attribute before first paint
+  (reading `localStorage.theme`, defaulting to dark) to avoid a flash; the toggle
+  button and its click handler live in `_includes/header.html` and persist the choice
+  to `localStorage`.
+- **Fonts** load from Google Fonts in `_includes/head.html`: `Fraunces` (italic
+  display / headings), `Space Grotesk` (body), `JetBrains Mono` (code, eyebrows,
+  meta, tags). Code blocks are clean bordered panels — no colored accent stripe.
+- **Tags.** Posts may set `tags: [a, b, c]` in front matter; they render as pills on
+  the home feed (`_layouts/home.html`) and the post header (`_layouts/post.html`).
+  Posts without tags simply show none — safe to adopt gradually.
+- **Hero.** The home page shows a hero block (only on paginator page 1). Edit its
+  copy in `_layouts/home.html`.
 
 ## Plugins in use
 

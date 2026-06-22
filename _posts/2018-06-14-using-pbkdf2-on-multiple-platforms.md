@@ -2,6 +2,7 @@
 layout: post
 title:  'Using PBKDF2 on multiple platforms'
 date:   2018-06-14
+tags: [security, ios, android, node]
 ---
 [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) is a popular choice when it comes to password hashing. I recently looked into PBKDF2 and wanted to use it across multiple platforms and spent some time trying to figure out how to implement it and how to make sure that hashes were the same no matter which platform they were generated on. The programming languages I used was Swift, Java and JavaScript (Node).
 
