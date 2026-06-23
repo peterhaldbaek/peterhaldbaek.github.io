@@ -1,0 +1,41 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  {%- comment -%} Build a sorted, de-duplicated list of all tag names. {%- endcomment -%}
+  {%- assign all_tags = site.tags | sort -%}
+
+  {%- if all_tags.size > 0 -%}
+  <ul class="tag-cloud">
+    {%- for tag in all_tags -%}
+      {%- assign tag_name = tag | first -%}
+      {%- assign tag_posts = tag | last -%}
+      <li><a class="tag" href="#{{ tag_name | slugify }}">{{ tag_name }} <span class="tag-count">{{ tag_posts.size }}</span></a></li>
+    {%- endfor -%}
+  </ul>
+
+  {%- for tag in all_tags -%}
+    {%- assign tag_name = tag | first -%}
+    {%- assign tag_posts = tag | last | sort: "date" | reverse -%}
+    <section class="tag-section" id="{{ tag_name | slugify }}">
+      <h2 class="tag-section__title">{{ tag_name }}</h2>
+      <ul class="post-list">
+        {%- for post in tag_posts -%}
+        <li class="post-item">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></span>
+          <h3 class="post-item__title">
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  {%- endfor -%}
+  {%- else -%}
+  <p>No tags yet.</p>
+  {%- endif -%}
+</div>
