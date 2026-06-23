@@ -17,7 +17,7 @@ layout: default
     {%- if page.tags.size > 0 -%}
       <ul class="tags">
         {%- for tag in page.tags -%}
-        <li><a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a></li>
+        <li class="tag"><a href="{{ '/tags/' | relative_url }}?tag={{ tag | slugify }}">{{ tag }}</a></li>
         {%- endfor -%}
       </ul>
     {%- endif -%}
