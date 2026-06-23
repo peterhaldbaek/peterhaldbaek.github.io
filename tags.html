@@ -5,37 +5,72 @@ permalink: /tags/
 ---
 
 <div class="tags-page">
-  {%- comment -%} Build a sorted, de-duplicated list of all tag names. {%- endcomment -%}
   {%- assign all_tags = site.tags | sort -%}
 
   {%- if all_tags.size > 0 -%}
-  <ul class="tag-cloud">
+  {%- comment -%} Index view: shown when no ?tag= is present (default, and the no-JS fallback). {%- endcomment -%}
+  <div id="tags-index">
+    <ul class="tag-cloud">
+      {%- for tag in all_tags -%}
+        {%- assign tag_name = tag | first -%}
+        {%- assign tag_posts = tag | last -%}
+        <li class="tag"><a href="?tag={{ tag_name | slugify }}">{{ tag_name }} <span class="tag-count">{{ tag_posts.size }}</span></a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  {%- comment -%} One section per tag. JS reveals only the requested one. {%- endcomment -%}
+  <div id="tag-results">
     {%- for tag in all_tags -%}
       {%- assign tag_name = tag | first -%}
-      {%- assign tag_posts = tag | last -%}
-      <li><a class="tag" href="#{{ tag_name | slugify }}">{{ tag_name }} <span class="tag-count">{{ tag_posts.size }}</span></a></li>
+      {%- assign tag_posts = tag | last | sort: "date" | reverse -%}
+      <section class="tag-section" data-tag="{{ tag_name | slugify }}">
+        <a class="tag-back" href="{{ '/tags/' | relative_url }}">&larr; All tags</a>
+        <h2 class="tag-section__title">Tagged &ldquo;{{ tag_name }}&rdquo;</h2>
+        <ul class="post-list">
+          {%- for post in tag_posts -%}
+          <li class="post-item">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></span>
+            <h3 class="post-item__title">
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              <div class="post-item__excerpt">{{ post.excerpt }}</div>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      </section>
     {%- endfor -%}
-  </ul>
-
-  {%- for tag in all_tags -%}
-    {%- assign tag_name = tag | first -%}
-    {%- assign tag_posts = tag | last | sort: "date" | reverse -%}
-    <section class="tag-section" id="{{ tag_name | slugify }}">
-      <h2 class="tag-section__title">{{ tag_name }}</h2>
-      <ul class="post-list">
-        {%- for post in tag_posts -%}
-        <li class="post-item">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></span>
-          <h3 class="post-item__title">
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </section>
-  {%- endfor -%}
+  </div>
   {%- else -%}
   <p>No tags yet.</p>
   {%- endif -%}
 </div>
+
+<script>
+  (function () {
+    var requested = new URLSearchParams(window.location.search).get('tag');
+    var index = document.getElementById('tags-index');
+    var sections = document.querySelectorAll('.tag-section');
+
+    if (requested) {
+      // Filtered view: show only the matching tag's posts, hide the cloud.
+      if (index) { index.style.display = 'none'; }
+      var matched = false;
+      sections.forEach(function (section) {
+        var isMatch = section.getAttribute('data-tag') === requested;
+        section.style.display = isMatch ? '' : 'none';
+        if (isMatch) { matched = true; }
+      });
+      if (!matched && index) {
+        // Unknown tag — fall back to the index so the page isn't blank.
+        index.style.display = '';
+      }
+    } else {
+      // Index view: show the cloud only.
+      sections.forEach(function (section) { section.style.display = 'none'; });
+    }
+  })();
+</script>
