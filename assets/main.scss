@@ -301,6 +301,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
 }
 
 .tag {
+  display: inline-block;
   font-family: $font-mono;
   font-size: 11.5px;
   letter-spacing: 0.02em;
@@ -309,6 +310,47 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
   background: var(--pink-tint);
   padding: 4px 11px;
   border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+a.tag:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--bg);
+}
+
+/* =========================================================================
+   Tags page
+   ========================================================================= */
+
+.tag-cloud {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-count {
+  opacity: 0.6;
+  margin-left: 2px;
+}
+
+.tag-section {
+  margin-top: 36px;
+  scroll-margin-top: 90px; /* so the heading isn't hidden under the sticky header when jumped to */
+}
+
+.tag-section__title {
+  font-family: $font-mono;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pink);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--pink-edge);
 }
 
 /* =========================================================================
