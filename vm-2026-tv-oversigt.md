@@ -91,10 +91,10 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 | Kanal | Tid        | Nr. | Kamp                  |
 |:-----:|-----------:|:---:|-----------------------|
 | ?     | 28.6 21:00 | 73  | Sydafrika - Canada    |
-| ?     | 29.6 19:00 | 76  | Brasilien - F2        |
+| ?     | 29.6 19:00 | 76  | Brasilien - Japan     |
 | ?     | 29.6 22:30 | 74  | Tyskland - 3ABCDF     |
-| ?     | 30.6 03:00 | 75  | F1 - Marokko          |
-| ?     | 30.6 19:00 | 78  | E2 - I2               |
+| ?     | 30.6 03:00 | 75  | Holland - Marokko     |
+| ?     | 30.6 19:00 | 78  | Elfenbenskysten - I2               |
 | ?     | 30.6 23:00 | 77  | I1 - 3CDFGH           |
 | ?     | 1.7 03:00  | 79  | Mexico - 3CEFHI       |
 | ?     | 1.7 18:00  | 80  | L1 - 3EHIJK           |
@@ -103,7 +103,7 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 | ?     | 2.7 21:00  | 84  | H1 - J2               |
 | ?     | 3.7 01:00  | 83  | K2 - L2               |
 | ?     | 3.7 05:00  | 85  | Schweiz - 3EFGIJ      |
-| ?     | 3.7 20:00  | 88  | D2 - G2               |
+| ?     | 3.7 20:00  | 88  | Australien - G2               |
 | ?     | 4.7 00:00  | 86  | Argentina - H2        |
 | ?     | 4.7 03:30  | 87  | K1 - 3DEIJL           |
 
