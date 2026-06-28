@@ -92,20 +92,20 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 |:-----:|-----------:|:---:|-----------------------|
 | TV2   | 28.6 21:00 | 73  | Sydafrika - Canada    |
 | TV2   | 29.6 19:00 | 76  | Brasilien - Japan     |
-| DR    | 29.6 22:30 | 74  | Tyskland - 3ABCDF     |
+| DR    | 29.6 22:30 | 74  | Tyskland - Paraguay   |
 | DR    | 30.6 03:00 | 75  | Holland - Marokko     |
 | DR    | 30.6 19:00 | 78  | Elfenbenskysten - Norge            |
-| SVT1  | 30.6 23:00 | 77  | Frankrig - 3CDFGH     |
-| DR    | 1.7 03:00  | 79  | Mexico - 3CEFHI       |
-| DR    | 1.7 18:00  | 80  | L1 - 3EHIJK           |
-| TV2   | 1.7 22:00  | 82  | Belgien - 3AEHIJ      |
-| TV2   | 2.7 02:00  | 81  | USA - 3BEFIJ          |
-| SVT1  | 2.7 21:00  | 84  | Spanien - J2          |
-| DR    | 3.7 01:00  | 83  | K2 - L2               |
-| TV2   | 3.7 05:00  | 85  | Schweiz - 3EFGIJ      |
+| SVT1  | 30.6 23:00 | 77  | Frankrig - Sverige    |
+| DR    | 1.7 03:00  | 79  | Mexico - Ecuador      |
+| DR    | 1.7 18:00  | 80  | England - DR Congo    |
+| TV2   | 1.7 22:00  | 82  | Belgien - Senegal     |
+| TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina |
+| SVT1  | 2.7 21:00  | 84  | Spanien - Østrig      |
+| DR    | 3.7 01:00  | 83  | Portugal - Kroatien   |
+| TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet    |
 | DR    | 3.7 20:00  | 88  | Australien - Egypten  |
 | DR    | 4.7 00:00  | 86  | Argentina - Kap Verde |
-| SVT1  | 4.7 03:30  | 87  | K1 - 3DEIJL           |
+| SVT1  | 4.7 03:30  | 87  | Colombia - Ghana      |
 
 # Ottendedelsfinaler
 
