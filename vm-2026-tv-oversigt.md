@@ -86,6 +86,76 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 | DR    | 28.6 04:00 | Jordan - Argentina                | J
 | DR    | 28.6 04:00 | Algeriet - Østrig                 | J
 
+# Slutspilstræ
+
+Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(--pink);font-weight:600">pink</span> er gået videre; felter med en kode (fx V77, V101) afventer en kamp. Træk til siden for at se hele træet. Detaljer med kanal og tidspunkt står i tabellerne nedenfor.
+
+<style>
+.ko-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1.2em 0 1.8em; padding-bottom:8px; }
+.ko{ display:flex; min-width:max-content; font-family:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace; }
+.ko .round{ display:flex; flex-direction:column; flex:0 0 150px; }
+.ko .round + .round{ margin-left:28px; }
+.ko .head{ text-align:center; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--honey); padding-bottom:12px; white-space:nowrap; }
+.ko .body{ display:flex; flex-direction:column; flex:1; }
+.ko .cell{ position:relative; flex:1; display:flex; align-items:center; }
+.ko .match{ position:relative; width:100%; background:var(--bg-soft); border:1px solid var(--line); border-radius:8px; padding:5px 0; }
+.ko .num{ display:block; font-size:8.5px; color:var(--muted); padding:0 8px 2px; letter-spacing:0.05em; }
+.ko .t{ position:relative; display:block; font-size:11.5px; line-height:1.55; color:var(--fg-dim); padding:1px 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ko .t:has(.sc){ padding-right:42px; }
+.ko .sc{ position:absolute; right:7px; top:50%; transform:translateY(-50%); font-size:9.5px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.ko .t.adv{ color:var(--pink); font-weight:600; }
+.ko .t.adv .sc{ color:var(--pink); }
+.ko .t.tbd{ color:var(--muted); opacity:0.75; }
+.ko .round:not(:last-child) .cell .match::after{ content:""; position:absolute; right:-14px; top:calc(50% - 1px); width:14px; height:2px; background:var(--line); }
+.ko .round:not(:first-child) .cell .match::before{ content:""; position:absolute; left:-14px; top:calc(50% - 1px); width:14px; height:2px; background:var(--line); }
+.ko .round:not(:last-child) .body .cell:nth-child(odd)::after{ content:""; position:absolute; right:-15px; top:50%; width:2px; height:100%; background:var(--line); }
+@media (max-width:600px){ .ko .round{ flex-basis:130px; } .ko .round + .round{ margin-left:24px; } }
+</style>
+
+<div class="ko-scroll" markdown="0"><div class="ko">
+<div class="round"><div class="head">1/16</div><div class="body">
+<div class="cell"><div class="match"><span class="num">#74</span><span class="t">Tyskland<span class="sc">1 (3)</span></span><span class="t adv">Paraguay<span class="sc">1 (4)</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#77</span><span class="t">Frankrig</span><span class="t">Sverige</span></div></div>
+<div class="cell"><div class="match"><span class="num">#73</span><span class="t">Sydafrika<span class="sc">0</span></span><span class="t adv">Canada<span class="sc">1</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#75</span><span class="t">Holland<span class="sc">1 (2)</span></span><span class="t adv">Marokko<span class="sc">1 (3)</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#83</span><span class="t">Portugal</span><span class="t">Kroatien</span></div></div>
+<div class="cell"><div class="match"><span class="num">#84</span><span class="t">Spanien</span><span class="t">Østrig</span></div></div>
+<div class="cell"><div class="match"><span class="num">#81</span><span class="t">USA</span><span class="t">Bosnien-Hercegovina</span></div></div>
+<div class="cell"><div class="match"><span class="num">#82</span><span class="t">Belgien</span><span class="t">Senegal</span></div></div>
+<div class="cell"><div class="match"><span class="num">#76</span><span class="t adv">Brasilien<span class="sc">2</span></span><span class="t">Japan<span class="sc">1</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#78</span><span class="t">Elfenbenskysten<span class="sc">1</span></span><span class="t adv">Norge<span class="sc">2</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#79</span><span class="t">Mexico</span><span class="t">Ecuador</span></div></div>
+<div class="cell"><div class="match"><span class="num">#80</span><span class="t">England</span><span class="t">DR Congo</span></div></div>
+<div class="cell"><div class="match"><span class="num">#86</span><span class="t">Argentina</span><span class="t">Kap Verde</span></div></div>
+<div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien</span><span class="t">Egypten</span></div></div>
+<div class="cell"><div class="match"><span class="num">#85</span><span class="t">Schweiz</span><span class="t">Algeriet</span></div></div>
+<div class="cell"><div class="match"><span class="num">#87</span><span class="t">Colombia</span><span class="t">Ghana</span></div></div>
+</div></div>
+<div class="round"><div class="head">1/8</div><div class="body">
+<div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t tbd">V77</span></div></div>
+<div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada</span><span class="t">Marokko</span></div></div>
+<div class="cell"><div class="match"><span class="num">#93</span><span class="t tbd">V83</span><span class="t tbd">V84</span></div></div>
+<div class="cell"><div class="match"><span class="num">#94</span><span class="t tbd">V81</span><span class="t tbd">V82</span></div></div>
+<div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien</span><span class="t">Norge</span></div></div>
+<div class="cell"><div class="match"><span class="num">#92</span><span class="t tbd">V79</span><span class="t tbd">V80</span></div></div>
+<div class="cell"><div class="match"><span class="num">#95</span><span class="t tbd">V86</span><span class="t tbd">V88</span></div></div>
+<div class="cell"><div class="match"><span class="num">#96</span><span class="t tbd">V85</span><span class="t tbd">V87</span></div></div>
+</div></div>
+<div class="round"><div class="head">Kvart</div><div class="body">
+<div class="cell"><div class="match"><span class="num">#97</span><span class="t tbd">V89</span><span class="t tbd">V90</span></div></div>
+<div class="cell"><div class="match"><span class="num">#98</span><span class="t tbd">V93</span><span class="t tbd">V94</span></div></div>
+<div class="cell"><div class="match"><span class="num">#99</span><span class="t tbd">V91</span><span class="t tbd">V92</span></div></div>
+<div class="cell"><div class="match"><span class="num">#100</span><span class="t tbd">V95</span><span class="t tbd">V96</span></div></div>
+</div></div>
+<div class="round"><div class="head">Semi</div><div class="body">
+<div class="cell"><div class="match"><span class="num">#101</span><span class="t tbd">V97</span><span class="t tbd">V98</span></div></div>
+<div class="cell"><div class="match"><span class="num">#102</span><span class="t tbd">V99</span><span class="t tbd">V100</span></div></div>
+</div></div>
+<div class="round"><div class="head">Finale</div><div class="body">
+<div class="cell"><div class="match"><span class="num">#104</span><span class="t tbd">V101</span><span class="t tbd">V102</span></div></div>
+</div></div>
+</div></div>
+
 # Sekstendedelsfinaler
 
 | Kanal | Tid        | Nr. | Kamp                  |
@@ -111,14 +181,14 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 
 | Kanal | Tid        | Nr. | Kamp        |
 |:-----:|-----------:|:---:|-------------|
-| ?     | 4.7 19:00  | 90  | Canada - Marokko  |
-| ?     | 4.7 23:00  | 89  | Paraguay - V77    |
-| ?     | 5.7 22:00  | 91  | Brasilien - V78   |
-| ?     | 6.7 02:00  | 92  | V79 - V80   |
-| ?     | 6.7 21:00  | 93  | V83 - V84   |
-| ?     | 7.7 02:00  | 94  | V81 - V82   |
-| ?     | 7.7 18:00  | 95  | V86 - V88   |
-| ?     | 7.7 22:00  | 96  | V85 - V87   |
+| TV2   | 4.7 19:00  | 90  | Canada - Marokko  |
+| DR    | 4.7 23:00  | 89  | Paraguay - V77    |
+| TV2   | 5.7 22:00  | 91  | Brasilien - Norge |
+| DR    | 6.7 02:00  | 92  | V79 - V80   |
+| DR    | 6.7 21:00  | 93  | V83 - V84   |
+| TV2   | 7.7 02:00  | 94  | V81 - V82   |
+| TV2   | 7.7 18:00  | 95  | V86 - V88   |
+| DR    | 7.7 22:00  | 96  | V85 - V87   |
 
 # Kvartfinaler
 
@@ -146,4 +216,4 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 
 | Kanal | Tid         | Nr. | Kamp        |
 |:-----:|------------:|:---:|-------------|
-| ?     | 19.7 21:00  | 104 | V101 - V102 |
+| TV2   | 19.7 21:00  | 104 | V101 - V102 |
