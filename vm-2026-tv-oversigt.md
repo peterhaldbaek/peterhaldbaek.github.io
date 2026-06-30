@@ -111,9 +111,9 @@ Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 
 | Kanal | Tid        | Nr. | Kamp        |
 |:-----:|-----------:|:---:|-------------|
-| ?     | 4.7 19:00  | 90  | V73 - V75   |
-| ?     | 4.7 23:00  | 89  | V74 - V77   |
-| ?     | 5.7 22:00  | 91  | V76 - V78   |
+| ?     | 4.7 19:00  | 90  | Canada - Marokko  |
+| ?     | 4.7 23:00  | 89  | Paraguay - V77    |
+| ?     | 5.7 22:00  | 91  | Brasilien - V78   |
 | ?     | 6.7 02:00  | 92  | V79 - V80   |
 | ?     | 6.7 21:00  | 93  | V83 - V84   |
 | ?     | 7.7 02:00  | 94  | V81 - V82   |
