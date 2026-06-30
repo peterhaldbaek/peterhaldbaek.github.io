@@ -165,7 +165,7 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | DR    | 29.6 22:30 | 74  | Tyskland - Paraguay   |
 | DR    | 30.6 03:00 | 75  | Holland - Marokko     |
 | DR    | 30.6 19:00 | 78  | Elfenbenskysten - Norge            |
-| SVT1  | 30.6 23:00 | 77  | Frankrig - Sverige    |
+| TV2   | 30.6 23:00 | 77  | Frankrig - Sverige    |
 | DR    | 1.7 03:00  | 79  | Mexico - Ecuador      |
 | DR    | 1.7 18:00  | 80  | England - DR Congo    |
 | TV2   | 1.7 22:00  | 82  | Belgien - Senegal     |
