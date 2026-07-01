@@ -115,7 +115,7 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="ko-scroll" markdown="0"><div class="ko">
 <div class="round"><div class="head">1/16</div><div class="body">
 <div class="cell"><div class="match"><span class="num">#74</span><span class="t">Tyskland<span class="sc">1 (3)</span></span><span class="t adv">Paraguay<span class="sc">1 (4)</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#77</span><span class="t">Frankrig</span><span class="t">Sverige</span></div></div>
+<div class="cell"><div class="match"><span class="num">#77</span><span class="t adv">Frankrig<span class="sc">3</span></span><span class="t">Sverige<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#73</span><span class="t">Sydafrika<span class="sc">0</span></span><span class="t adv">Canada<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#75</span><span class="t">Holland<span class="sc">1 (2)</span></span><span class="t adv">Marokko<span class="sc">1 (3)</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#83</span><span class="t">Portugal</span><span class="t">Kroatien</span></div></div>
@@ -124,7 +124,7 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#82</span><span class="t">Belgien</span><span class="t">Senegal</span></div></div>
 <div class="cell"><div class="match"><span class="num">#76</span><span class="t adv">Brasilien<span class="sc">2</span></span><span class="t">Japan<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#78</span><span class="t">Elfenbenskysten<span class="sc">1</span></span><span class="t adv">Norge<span class="sc">2</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#79</span><span class="t">Mexico</span><span class="t">Ecuador</span></div></div>
+<div class="cell"><div class="match"><span class="num">#79</span><span class="t adv">Mexico<span class="sc">2</span></span><span class="t">Ecuador<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#80</span><span class="t">England</span><span class="t">DR Congo</span></div></div>
 <div class="cell"><div class="match"><span class="num">#86</span><span class="t">Argentina</span><span class="t">Kap Verde</span></div></div>
 <div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien</span><span class="t">Egypten</span></div></div>
@@ -132,12 +132,12 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#87</span><span class="t">Colombia</span><span class="t">Ghana</span></div></div>
 </div></div>
 <div class="round"><div class="head">1/8</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t tbd">V77</span></div></div>
+<div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t">Frankrig</span></div></div>
 <div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada</span><span class="t">Marokko</span></div></div>
 <div class="cell"><div class="match"><span class="num">#93</span><span class="t tbd">V83</span><span class="t tbd">V84</span></div></div>
 <div class="cell"><div class="match"><span class="num">#94</span><span class="t tbd">V81</span><span class="t tbd">V82</span></div></div>
 <div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien</span><span class="t">Norge</span></div></div>
-<div class="cell"><div class="match"><span class="num">#92</span><span class="t tbd">V79</span><span class="t tbd">V80</span></div></div>
+<div class="cell"><div class="match"><span class="num">#92</span><span class="t">Mexico</span><span class="t tbd">V80</span></div></div>
 <div class="cell"><div class="match"><span class="num">#95</span><span class="t tbd">V86</span><span class="t tbd">V88</span></div></div>
 <div class="cell"><div class="match"><span class="num">#96</span><span class="t tbd">V85</span><span class="t tbd">V87</span></div></div>
 </div></div>
@@ -182,9 +182,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | Kanal | Tid        | Nr. | Kamp        |
 |:-----:|-----------:|:---:|-------------|
 | TV2   | 4.7 19:00  | 90  | Canada - Marokko  |
-| DR    | 4.7 23:00  | 89  | Paraguay - V77    |
+| DR    | 4.7 23:00  | 89  | Paraguay - Frankrig |
 | TV2   | 5.7 22:00  | 91  | Brasilien - Norge |
-| DR    | 6.7 02:00  | 92  | V79 - V80   |
+| DR    | 6.7 02:00  | 92  | Mexico - V80 |
 | DR    | 6.7 21:00  | 93  | V83 - V84   |
 | TV2   | 7.7 02:00  | 94  | V81 - V82   |
 | TV2   | 7.7 18:00  | 95  | V86 - V88   |
