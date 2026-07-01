@@ -9,82 +9,84 @@ Kanalen er valgt efter denne prioritet: **DR** før **SVT** før **TV 2**. DR ka
 
 Bemærk, at Danmark ikke er at finde i kampprogrammet til denne slutrunde.
 
+Resultater opdateres løbende. Et tal i parentes i knockoutkampene angiver straffesparkskonkurrence, og **–** betyder, at kampen endnu ikke er spillet.
+
 # Gruppekampe
 
-| Kanal | Tid        | Kamp                              | Gruppe |
-|:-----:|-----------:|-----------------------------------|--------|
-| TV2   | 11.6 21:00 | Mexico - Sydafrika                | A
-| TV2   | 12.6 04:00 | Sydkorea - Tjekkiet               | A
-| DR    | 12.6 21:00 | Canada - Bosnien-Hercegovina      | B
-| TV2   | 13.6 03:00 | USA - Paraguay                    | D
-| DR    | 13.6 21:00 | Qatar - Schweiz                   | B
-| SVT1  | 14.6 00:00 | Brasilien - Marokko               | C
-| DR    | 14.6 03:00 | Haiti - Skotland                  | C
-| DR    | 14.6 06:00 | Australien - Tyrkiet              | D
-| DR    | 14.6 19:00 | Tyskland - Curacao                | E
-| TV2   | 14.6 22:00 | Holland - Japan                   | F
-| DR    | 15.6 01:00 | Elfenbenskysten - Ecuador         | E
-| DR    | 15.6 04:00 | Sverige - Tunesien                | F
-| SVT1  | 15.6 18:00 | Spanien - Kap Verde               | H
-| SVT2  | 15.6 21:00 | Belgien - Egypten                 | G
-| DR    | 16.6 00:00 | Saudi-Arabien - Uruguay           | H
-| DR    | 16.6 03:00 | Iran - New Zealand                | G
-| DR    | 16.6 21:00 | Frankrig - Senegal                | I
-| TV2   | 17.6 00:00 | Irak - Norge                      | I
-| TV2   | 17.6 03:00 | Argentina - Algeriet              | J
-| TV2   | 17.6 06:00 | Østrig - Jordan                   | J
-| TV2   | 17.6 19:00 | Portugal - DR Congo               | K
-| TV2   | 17.6 22:00 | England - Kroatien                | L
-| DR    | 18.6 01:00 | Ghana - Panama                    | L
-| TV2   | 18.6 04:00 | Usbekistan - Colombia             | K
-| DR    | 18.6 18:00 | Tjekkiet - Sydafrika              | A
-| DR    | 18.6 21:00 | Schweiz - Bosnien-Hercegovina     | B
-| DR    | 19.6 00:00 | Canada - Qatar                    | B
-| TV2   | 19.6 03:00 | Mexico - Sydkorea                 | A
-| DR    | 19.6 21:00 | USA - Australien                  | D
-| DR    | 20.6 00:00 | Skotland - Marokko                | C
-| DR    | 20.6 03:00 | Brasilien - Haiti                 | C
-| TV2   | 20.6 06:00 | Tyrkiet - Paraguay                | D
-| DR    | 20.6 19:00 | Holland - Sverige                 | F
-| DR    | 20.6 22:00 | Tyskland - Elfenbenskysten        | E
-| TV2   | 21.6 02:00 | Ecuador - Curacao                 | E
-| SVT1  | 21.6 06:00 | Tunesien - Japan                  | F
-| TV2   | 21.6 18:00 | Spanien - Saudi-Arabien           | H
-| DR    | 21.6 21:00 | Belgien - Iran                    | G
-| TV2   | 22.6 00:00 | Uruguay - Kap Verde               | H
-| TV2   | 22.6 03:00 | New Zealand - Egypten             | G
-| SVT2  | 22.6 19:00 | Argentina - Østrig                | J
-| DR    | 22.6 23:00 | Frankrig - Irak                   | I
-| SVT1  | 23.6 02:00 | Norge - Senegal                   | I
-| DR    | 23.6 05:00 | Jordan - Algeriet                 | J
-| DR    | 23.6 19:00 | Portugal - Usbekistan             | K
-| SVT1  | 23.6 22:00 | England - Ghana                   | L
-| DR    | 24.6 01:00 | Panama - Kroatien                 | L
-| TV2   | 24.6 04:00 | Colombia - DR Congo               | K
-| DR    | 24.6 21:00 | Bosnien-Hercegovina - Qatar       | B
-| DR    | 24.6 21:00 | Schweiz - Canada                  | B
-| DR    | 25.6 00:00 | Skotland - Brasilien              | C
-| DR    | 25.6 00:00 | Marokko - Haiti                   | C
-| SVT2  | 25.6 03:00 | Sydafrika - Sydkorea              | A
-| SVT1  | 25.6 03:00 | Tjekkiet - Mexico                 | A
-| SVT1  | 25.6 22:00 | Curacao - Elfenbenskysten         | E
-| SVT1  | 25.6 22:00 | Ecuador - Tyskland                | E
-| DR    | 26.6 01:00 | Japan - Sverige                   | F
-| DR    | 26.6 01:00 | Tunesien - Holland                | F
-| DR    | 26.6 04:00 | Tyrkiet - USA                     | D
-| DR    | 26.6 04:00 | Paraguay - Australien             | D
-| DR    | 26.6 21:00 | Senegal - Irak                    | I
-| DR    | 26.6 21:00 | Norge - Frankrig                  | I
-| TV2   | 27.6 02:00 | Kap Verde - Saudi-Arabien         | H
-| TV2   | 27.6 02:00 | Uruguay - Spanien                 | H
-| TV2   | 27.6 05:00 | New Zealand - Belgien             | G
-| TV2   | 27.6 05:00 | Egypten - Iran                    | G
-| SVT1  | 27.6 23:00 | Panama - England                  | L
-| SVT2  | 27.6 23:00 | Kroatien - Ghana                  | L
-| TV2   | 28.6 01:30 | DR Congo - Usbekistan             | K
-| TV2   | 28.6 01:30 | Colombia - Portugal               | K
-| DR    | 28.6 04:00 | Jordan - Argentina                | J
-| DR    | 28.6 04:00 | Algeriet - Østrig                 | J
+| Kanal | Tid        | Kamp                              | Gruppe | Resultat |
+|:-----:|-----------:|-----------------------------------|:------:|:--------:|
+| TV2   | 11.6 21:00 | Mexico - Sydafrika                | A | 2-0
+| TV2   | 12.6 04:00 | Sydkorea - Tjekkiet               | A | 2-1
+| DR    | 12.6 21:00 | Canada - Bosnien-Hercegovina      | B | 1-1
+| TV2   | 13.6 03:00 | USA - Paraguay                    | D | 4-1
+| DR    | 13.6 21:00 | Qatar - Schweiz                   | B | 1-1
+| SVT1  | 14.6 00:00 | Brasilien - Marokko               | C | 1-1
+| DR    | 14.6 03:00 | Haiti - Skotland                  | C | 0-1
+| DR    | 14.6 06:00 | Australien - Tyrkiet              | D | 2-0
+| DR    | 14.6 19:00 | Tyskland - Curacao                | E | 7-1
+| TV2   | 14.6 22:00 | Holland - Japan                   | F | 2-2
+| DR    | 15.6 01:00 | Elfenbenskysten - Ecuador         | E | 1-0
+| DR    | 15.6 04:00 | Sverige - Tunesien                | F | 5-1
+| SVT1  | 15.6 18:00 | Spanien - Kap Verde               | H | 0-0
+| SVT2  | 15.6 21:00 | Belgien - Egypten                 | G | 1-1
+| DR    | 16.6 00:00 | Saudi-Arabien - Uruguay           | H | 1-1
+| DR    | 16.6 03:00 | Iran - New Zealand                | G | 2-2
+| DR    | 16.6 21:00 | Frankrig - Senegal                | I | 3-1
+| TV2   | 17.6 00:00 | Irak - Norge                      | I | 1-4
+| TV2   | 17.6 03:00 | Argentina - Algeriet              | J | 3-0
+| TV2   | 17.6 06:00 | Østrig - Jordan                   | J | 3-1
+| TV2   | 17.6 19:00 | Portugal - DR Congo               | K | 1-1
+| TV2   | 17.6 22:00 | England - Kroatien                | L | 4-2
+| DR    | 18.6 01:00 | Ghana - Panama                    | L | 1-0
+| TV2   | 18.6 04:00 | Usbekistan - Colombia             | K | 1-3
+| DR    | 18.6 18:00 | Tjekkiet - Sydafrika              | A | 1-1
+| DR    | 18.6 21:00 | Schweiz - Bosnien-Hercegovina     | B | 4-1
+| DR    | 19.6 00:00 | Canada - Qatar                    | B | 6-0
+| TV2   | 19.6 03:00 | Mexico - Sydkorea                 | A | 1-0
+| DR    | 19.6 21:00 | USA - Australien                  | D | 2-0
+| DR    | 20.6 00:00 | Skotland - Marokko                | C | 0-1
+| DR    | 20.6 03:00 | Brasilien - Haiti                 | C | 3-0
+| TV2   | 20.6 06:00 | Tyrkiet - Paraguay                | D | 0-1
+| DR    | 20.6 19:00 | Holland - Sverige                 | F | 5-1
+| DR    | 20.6 22:00 | Tyskland - Elfenbenskysten        | E | 2-1
+| TV2   | 21.6 02:00 | Ecuador - Curacao                 | E | 0-0
+| SVT1  | 21.6 06:00 | Tunesien - Japan                  | F | 0-4
+| TV2   | 21.6 18:00 | Spanien - Saudi-Arabien           | H | 4-0
+| DR    | 21.6 21:00 | Belgien - Iran                    | G | 0-0
+| TV2   | 22.6 00:00 | Uruguay - Kap Verde               | H | 2-2
+| TV2   | 22.6 03:00 | New Zealand - Egypten             | G | 1-3
+| SVT2  | 22.6 19:00 | Argentina - Østrig                | J | 2-0
+| DR    | 22.6 23:00 | Frankrig - Irak                   | I | 3-0
+| SVT1  | 23.6 02:00 | Norge - Senegal                   | I | 3-2
+| DR    | 23.6 05:00 | Jordan - Algeriet                 | J | 1-2
+| DR    | 23.6 19:00 | Portugal - Usbekistan             | K | 5-0
+| SVT1  | 23.6 22:00 | England - Ghana                   | L | 0-0
+| DR    | 24.6 01:00 | Panama - Kroatien                 | L | 0-1
+| TV2   | 24.6 04:00 | Colombia - DR Congo               | K | 1-0
+| DR    | 24.6 21:00 | Bosnien-Hercegovina - Qatar       | B | 3-1
+| DR    | 24.6 21:00 | Schweiz - Canada                  | B | 2-1
+| DR    | 25.6 00:00 | Skotland - Brasilien              | C | 0-3
+| DR    | 25.6 00:00 | Marokko - Haiti                   | C | 4-2
+| SVT2  | 25.6 03:00 | Sydafrika - Sydkorea              | A | 1-0
+| SVT1  | 25.6 03:00 | Tjekkiet - Mexico                 | A | 0-3
+| SVT1  | 25.6 22:00 | Curacao - Elfenbenskysten         | E | 0-2
+| SVT1  | 25.6 22:00 | Ecuador - Tyskland                | E | 2-1
+| DR    | 26.6 01:00 | Japan - Sverige                   | F | 1-1
+| DR    | 26.6 01:00 | Tunesien - Holland                | F | 1-3
+| DR    | 26.6 04:00 | Tyrkiet - USA                     | D | 3-2
+| DR    | 26.6 04:00 | Paraguay - Australien             | D | 0-0
+| DR    | 26.6 21:00 | Senegal - Irak                    | I | 5-0
+| DR    | 26.6 21:00 | Norge - Frankrig                  | I | 1-4
+| TV2   | 27.6 02:00 | Kap Verde - Saudi-Arabien         | H | 0-0
+| TV2   | 27.6 02:00 | Uruguay - Spanien                 | H | 0-1
+| TV2   | 27.6 05:00 | New Zealand - Belgien             | G | 1-5
+| TV2   | 27.6 05:00 | Egypten - Iran                    | G | 1-1
+| SVT1  | 27.6 23:00 | Panama - England                  | L | 0-2
+| SVT2  | 27.6 23:00 | Kroatien - Ghana                  | L | 2-1
+| TV2   | 28.6 01:30 | DR Congo - Usbekistan             | K | 3-1
+| TV2   | 28.6 01:30 | Colombia - Portugal               | K | 0-0
+| DR    | 28.6 04:00 | Jordan - Argentina                | J | 1-3
+| DR    | 28.6 04:00 | Algeriet - Østrig                 | J | 3-3
 
 # Slutspilstræ
 
@@ -158,62 +160,62 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 
 # Sekstendedelsfinaler
 
-| Kanal | Tid        | Nr. | Kamp                  |
-|:-----:|-----------:|:---:|-----------------------|
-| TV2   | 28.6 21:00 | 73  | Sydafrika - Canada    |
-| TV2   | 29.6 19:00 | 76  | Brasilien - Japan     |
-| DR    | 29.6 22:30 | 74  | Tyskland - Paraguay   |
-| DR    | 30.6 03:00 | 75  | Holland - Marokko     |
-| DR    | 30.6 19:00 | 78  | Elfenbenskysten - Norge            |
-| TV2   | 30.6 23:00 | 77  | Frankrig - Sverige    |
-| DR    | 1.7 03:00  | 79  | Mexico - Ecuador      |
-| DR    | 1.7 18:00  | 80  | England - DR Congo    |
-| TV2   | 1.7 22:00  | 82  | Belgien - Senegal     |
-| TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina |
-| SVT1  | 2.7 21:00  | 84  | Spanien - Østrig      |
-| DR    | 3.7 01:00  | 83  | Portugal - Kroatien   |
-| TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet    |
-| DR    | 3.7 20:00  | 88  | Australien - Egypten  |
-| DR    | 4.7 00:00  | 86  | Argentina - Kap Verde |
-| SVT1  | 4.7 03:30  | 87  | Colombia - Ghana      |
+| Kanal | Tid        | Nr. | Kamp                      | Resultat  |
+|:-----:|-----------:|:---:|---------------------------|:---------:|
+| TV2   | 28.6 21:00 | 73  | Sydafrika - Canada        | 0-1       |
+| TV2   | 29.6 19:00 | 76  | Brasilien - Japan         | 2-1       |
+| DR    | 29.6 22:30 | 74  | Tyskland - Paraguay       | 1-1 (3-4) |
+| DR    | 30.6 03:00 | 75  | Holland - Marokko         | 1-1 (2-3) |
+| DR    | 30.6 19:00 | 78  | Elfenbenskysten - Norge   | 1-2       |
+| TV2   | 30.6 23:00 | 77  | Frankrig - Sverige        | 3-0       |
+| DR    | 1.7 03:00  | 79  | Mexico - Ecuador          | 2-0       |
+| DR    | 1.7 18:00  | 80  | England - DR Congo        | –         |
+| TV2   | 1.7 22:00  | 82  | Belgien - Senegal         | –         |
+| TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina | –         |
+| SVT1  | 2.7 21:00  | 84  | Spanien - Østrig          | –         |
+| DR    | 3.7 01:00  | 83  | Portugal - Kroatien       | –         |
+| TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet        | –         |
+| DR    | 3.7 20:00  | 88  | Australien - Egypten      | –         |
+| DR    | 4.7 00:00  | 86  | Argentina - Kap Verde     | –         |
+| SVT1  | 4.7 03:30  | 87  | Colombia - Ghana          | –         |
 
 # Ottendedelsfinaler
 
-| Kanal | Tid        | Nr. | Kamp        |
-|:-----:|-----------:|:---:|-------------|
-| TV2   | 4.7 19:00  | 90  | Canada - Marokko  |
-| DR    | 4.7 23:00  | 89  | Paraguay - Frankrig |
-| TV2   | 5.7 22:00  | 91  | Brasilien - Norge |
-| DR    | 6.7 02:00  | 92  | Mexico - V80 |
-| DR    | 6.7 21:00  | 93  | V83 - V84   |
-| TV2   | 7.7 02:00  | 94  | V81 - V82   |
-| TV2   | 7.7 18:00  | 95  | V86 - V88   |
-| DR    | 7.7 22:00  | 96  | V85 - V87   |
+| Kanal | Tid        | Nr. | Kamp                | Resultat |
+|:-----:|-----------:|:---:|---------------------|:--------:|
+| TV2   | 4.7 19:00  | 90  | Canada - Marokko    | –        |
+| DR    | 4.7 23:00  | 89  | Paraguay - Frankrig | –        |
+| TV2   | 5.7 22:00  | 91  | Brasilien - Norge   | –        |
+| DR    | 6.7 02:00  | 92  | Mexico - V80        | –        |
+| DR    | 6.7 21:00  | 93  | V83 - V84           | –        |
+| TV2   | 7.7 02:00  | 94  | V81 - V82           | –        |
+| TV2   | 7.7 18:00  | 95  | V86 - V88           | –        |
+| DR    | 7.7 22:00  | 96  | V85 - V87           | –        |
 
 # Kvartfinaler
 
-| Kanal | Tid         | Nr. | Kamp        |
-|:-----:|------------:|:---:|-------------|
-| ?     | 9.7 22:00   | 97  | V89 - V90   |
-| ?     | 10.7 21:00  | 98  | V93 - V94   |
-| ?     | 11.7 23:00  | 99  | V91 - V92   |
-| ?     | 12.7 03:00  | 100 | V95 - V96   |
+| Kanal | Tid         | Nr. | Kamp      | Resultat |
+|:-----:|------------:|:---:|-----------|:--------:|
+| ?     | 9.7 22:00   | 97  | V89 - V90 | –        |
+| ?     | 10.7 21:00  | 98  | V93 - V94 | –        |
+| ?     | 11.7 23:00  | 99  | V91 - V92 | –        |
+| ?     | 12.7 03:00  | 100 | V95 - V96 | –        |
 
 # Semifinaler
 
-| Kanal | Tid         | Nr. | Kamp        |
-|:-----:|------------:|:---:|-------------|
-| ?     | 14.7 21:00  | 101 | V97 - V98   |
-| ?     | 15.7 21:00  | 102 | V99 - V100  |
+| Kanal | Tid         | Nr. | Kamp       | Resultat |
+|:-----:|------------:|:---:|------------|:--------:|
+| ?     | 14.7 21:00  | 101 | V97 - V98  | –        |
+| ?     | 15.7 21:00  | 102 | V99 - V100 | –        |
 
 # Bronzekamp
 
-| Kanal | Tid         | Nr. | Kamp        |
-|:-----:|------------:|:---:|-------------|
-| ?     | 18.7 23:00  | 103 | T101 - T102 |
+| Kanal | Tid         | Nr. | Kamp        | Resultat |
+|:-----:|------------:|:---:|-------------|:--------:|
+| ?     | 18.7 23:00  | 103 | T101 - T102 | –        |
 
 # Finale
 
-| Kanal | Tid         | Nr. | Kamp        |
-|:-----:|------------:|:---:|-------------|
-| TV2   | 19.7 21:00  | 104 | V101 - V102 |
+| Kanal | Tid         | Nr. | Kamp        | Resultat |
+|:-----:|------------:|:---:|-------------|:--------:|
+| TV2   | 19.7 21:00  | 104 | V101 - V102 | –        |
