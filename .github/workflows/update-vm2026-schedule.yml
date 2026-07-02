@@ -9,12 +9,13 @@ on:
 permissions:
   contents: write        # create the branch + commit
   pull-requests: write   # open the PR
+  id-token: write        # OIDC token the action uses to authenticate
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: anthropics/claude-code-action@v1
         with:
