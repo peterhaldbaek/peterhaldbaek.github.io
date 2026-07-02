@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write        # create the branch + commit
   pull-requests: write   # open the PR
+  id-token: write        # OIDC token the action uses to authenticate
 
 jobs:
   update:
