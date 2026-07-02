@@ -21,7 +21,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
-            --model claude-sonnet-4-6
+            --model claude-haiku-4-5
             --allowedTools Read,Edit,Write,WebSearch,WebFetch,Bash(git:*),Bash(gh:*)
           prompt: |
             You maintain the file `vm-2026-tv-oversigt.md` in this repo: a Danish
