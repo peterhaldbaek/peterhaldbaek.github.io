@@ -122,12 +122,12 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#75</span><span class="t">Holland<span class="sc">1 (2)</span></span><span class="t adv">Marokko<span class="sc">1 (3)</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#83</span><span class="t">Portugal</span><span class="t">Kroatien</span></div></div>
 <div class="cell"><div class="match"><span class="num">#84</span><span class="t">Spanien</span><span class="t">Østrig</span></div></div>
-<div class="cell"><div class="match"><span class="num">#81</span><span class="t">USA</span><span class="t">Bosnien-Hercegovina</span></div></div>
-<div class="cell"><div class="match"><span class="num">#82</span><span class="t">Belgien</span><span class="t">Senegal</span></div></div>
+<div class="cell"><div class="match"><span class="num">#81</span><span class="t adv">USA<span class="sc">2</span></span><span class="t">Bosnien-Hercegovina<span class="sc">0</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#82</span><span class="t adv">Belgien<span class="sc">3</span></span><span class="t">Senegal<span class="sc">2</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#76</span><span class="t adv">Brasilien<span class="sc">2</span></span><span class="t">Japan<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#78</span><span class="t">Elfenbenskysten<span class="sc">1</span></span><span class="t adv">Norge<span class="sc">2</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#79</span><span class="t adv">Mexico<span class="sc">2</span></span><span class="t">Ecuador<span class="sc">0</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#80</span><span class="t">England</span><span class="t">DR Congo</span></div></div>
+<div class="cell"><div class="match"><span class="num">#80</span><span class="t adv">England<span class="sc">2</span></span><span class="t">DR Congo<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#86</span><span class="t">Argentina</span><span class="t">Kap Verde</span></div></div>
 <div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien</span><span class="t">Egypten</span></div></div>
 <div class="cell"><div class="match"><span class="num">#85</span><span class="t">Schweiz</span><span class="t">Algeriet</span></div></div>
@@ -137,9 +137,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t">Frankrig</span></div></div>
 <div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada</span><span class="t">Marokko</span></div></div>
 <div class="cell"><div class="match"><span class="num">#93</span><span class="t tbd">V83</span><span class="t tbd">V84</span></div></div>
-<div class="cell"><div class="match"><span class="num">#94</span><span class="t tbd">V81</span><span class="t tbd">V82</span></div></div>
+<div class="cell"><div class="match"><span class="num">#94</span><span class="t">USA</span><span class="t">Belgien</span></div></div>
 <div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien</span><span class="t">Norge</span></div></div>
-<div class="cell"><div class="match"><span class="num">#92</span><span class="t">Mexico</span><span class="t tbd">V80</span></div></div>
+<div class="cell"><div class="match"><span class="num">#92</span><span class="t">Mexico</span><span class="t">England</span></div></div>
 <div class="cell"><div class="match"><span class="num">#95</span><span class="t tbd">V86</span><span class="t tbd">V88</span></div></div>
 <div class="cell"><div class="match"><span class="num">#96</span><span class="t tbd">V85</span><span class="t tbd">V87</span></div></div>
 </div></div>
@@ -169,9 +169,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | DR    | 30.6 19:00 | 78  | Elfenbenskysten - Norge   | 1-2       |
 | TV2   | 30.6 23:00 | 77  | Frankrig - Sverige        | 3-0       |
 | DR    | 1.7 03:00  | 79  | Mexico - Ecuador          | 2-0       |
-| DR    | 1.7 18:00  | 80  | England - DR Congo        | –         |
-| TV2   | 1.7 22:00  | 82  | Belgien - Senegal         | –         |
-| TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina | –         |
+| DR    | 1.7 18:00  | 80  | England - DR Congo        | 2-1       |
+| TV2   | 1.7 22:00  | 82  | Belgien - Senegal         | 3-2       |
+| TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina | 2-0       |
 | SVT1  | 2.7 21:00  | 84  | Spanien - Østrig          | –         |
 | DR    | 3.7 01:00  | 83  | Portugal - Kroatien       | –         |
 | TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet        | –         |
@@ -186,9 +186,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | TV2   | 4.7 19:00  | 90  | Canada - Marokko    | –        |
 | DR    | 4.7 23:00  | 89  | Paraguay - Frankrig | –        |
 | TV2   | 5.7 22:00  | 91  | Brasilien - Norge   | –        |
-| DR    | 6.7 02:00  | 92  | Mexico - V80        | –        |
+| DR    | 6.7 02:00  | 92  | Mexico - England    | –        |
 | DR    | 6.7 21:00  | 93  | V83 - V84           | –        |
-| TV2   | 7.7 02:00  | 94  | V81 - V82           | –        |
+| TV2   | 7.7 02:00  | 94  | USA - Belgien       | –        |
 | TV2   | 7.7 18:00  | 95  | V86 - V88           | –        |
 | DR    | 7.7 22:00  | 96  | V85 - V87           | –        |
 
