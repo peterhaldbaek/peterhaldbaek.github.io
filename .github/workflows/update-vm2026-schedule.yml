@@ -1,0 +1,56 @@
+name: Update VM 2026 schedule
+
+on:
+  workflow_dispatch: {}   # manual "Run workflow" button in the Actions tab
+  # Uncomment to run daily at 09:00 Europe/Copenhagen (07:00 UTC) once you trust it:
+  # schedule:
+  #   - cron: "0 7 * * *"
+
+permissions:
+  contents: write        # create the branch + commit
+  pull-requests: write   # open the PR
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --model claude-sonnet-4-6
+            --allowedTools Read,Edit,Write,WebSearch,WebFetch,Bash(git:*),Bash(gh:*)
+          prompt: |
+            You maintain the file `vm-2026-tv-oversigt.md` in this repo: a Danish
+            TV guide for the 2026 World Cup. Today's date is provided by the runner
+            environment. Read `CLAUDE.md` first for content conventions.
+
+            Your job: bring the schedule up to date with reality, then open a PR.
+
+            1. Read `vm-2026-tv-oversigt.md`. Every match with `–` in the Resultat
+               column whose kickoff (Danish time, shown in Tid) is already in the
+               PAST needs a result.
+            2. Use WebSearch / WebFetch to find the actual final scores. Prefer
+               reliable sources (official FIFA, DR, SVT, major sports media).
+               For knockout penalty shootouts use the `1-1 (3-4)` format already
+               used in the file. Never invent a result — if you cannot confirm a
+               score from a source, leave the `–` untouched.
+            3. Propagate knockout progression: placeholders like `V80` (vinder af
+               kamp 80), `T101`, etc. should be replaced with the actual qualified
+               team name once that match is decided.
+            4. Fill in `?` channels for knockout matches once the Danish/Swedish
+               broadcaster (DR/SVT/TV2/TV4) is announced. Apply the channel-priority
+               rule documented at the top of the file and in CLAUDE.md
+               (DR > SVT > TV2). Only change a channel if you can confirm it.
+            5. Preserve the exact Markdown table formatting, column alignment, order
+               of rows, and all surrounding prose. Change ONLY data cells.
+
+            Finally:
+            - If you made NO changes, do nothing and do not open a PR.
+            - If you made changes, create a new branch named
+              `auto/vm2026-update-<today's date>`, commit with a message like
+              `content(vm2026): auto-update results and channels`, push it, and open
+              a PR against `main` summarizing exactly which matches/cells you changed
+              and citing your sources. Do not merge it — a human will review.
