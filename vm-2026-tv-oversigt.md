@@ -120,8 +120,8 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#77</span><span class="t adv">Frankrig<span class="sc">3</span></span><span class="t">Sverige<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#73</span><span class="t">Sydafrika<span class="sc">0</span></span><span class="t adv">Canada<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#75</span><span class="t">Holland<span class="sc">1 (2)</span></span><span class="t adv">Marokko<span class="sc">1 (3)</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#83</span><span class="t">Portugal</span><span class="t">Kroatien</span></div></div>
-<div class="cell"><div class="match"><span class="num">#84</span><span class="t">Spanien</span><span class="t">Østrig</span></div></div>
+<div class="cell"><div class="match"><span class="num">#83</span><span class="t adv">Portugal<span class="sc">2</span></span><span class="t">Kroatien<span class="sc">1</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#84</span><span class="t adv">Spanien<span class="sc">3</span></span><span class="t">Østrig<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#81</span><span class="t adv">USA<span class="sc">2</span></span><span class="t">Bosnien-Hercegovina<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#82</span><span class="t adv">Belgien<span class="sc">3</span></span><span class="t">Senegal<span class="sc">2</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#76</span><span class="t adv">Brasilien<span class="sc">2</span></span><span class="t">Japan<span class="sc">1</span></span></div></div>
@@ -130,7 +130,7 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#80</span><span class="t adv">England<span class="sc">2</span></span><span class="t">DR Congo<span class="sc">1</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#86</span><span class="t">Argentina</span><span class="t">Kap Verde</span></div></div>
 <div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien</span><span class="t">Egypten</span></div></div>
-<div class="cell"><div class="match"><span class="num">#85</span><span class="t">Schweiz</span><span class="t">Algeriet</span></div></div>
+<div class="cell"><div class="match"><span class="num">#85</span><span class="t adv">Schweiz<span class="sc">2</span></span><span class="t">Algeriet<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#87</span><span class="t">Colombia</span><span class="t">Ghana</span></div></div>
 </div></div>
 <div class="round"><div class="head">1/8</div><div class="body">
@@ -172,9 +172,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | DR    | 1.7 18:00  | 80  | England - DR Congo        | 2-1       |
 | TV2   | 1.7 22:00  | 82  | Belgien - Senegal         | 3-2       |
 | TV2   | 2.7 02:00  | 81  | USA - Bosnien-Hercegovina | 2-0       |
-| SVT1  | 2.7 21:00  | 84  | Spanien - Østrig          | –         |
-| DR    | 3.7 01:00  | 83  | Portugal - Kroatien       | –         |
-| TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet        | –         |
+| SVT1  | 2.7 21:00  | 84  | Spanien - Østrig          | 3-0       |
+| DR    | 3.7 01:00  | 83  | Portugal - Kroatien       | 2-1       |
+| TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet        | 2-0       |
 | DR    | 3.7 20:00  | 88  | Australien - Egypten      | –         |
 | DR    | 4.7 00:00  | 86  | Argentina - Kap Verde     | –         |
 | SVT1  | 4.7 03:30  | 87  | Colombia - Ghana          | –         |
