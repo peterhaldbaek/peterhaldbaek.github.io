@@ -128,20 +128,20 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#78</span><span class="t">Elfenbenskysten<span class="sc">1</span></span><span class="t adv">Norge<span class="sc">2</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#79</span><span class="t adv">Mexico<span class="sc">2</span></span><span class="t">Ecuador<span class="sc">0</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#80</span><span class="t adv">England<span class="sc">2</span></span><span class="t">DR Congo<span class="sc">1</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#86</span><span class="t">Argentina</span><span class="t">Kap Verde</span></div></div>
-<div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien</span><span class="t">Egypten</span></div></div>
+<div class="cell"><div class="match"><span class="num">#86</span><span class="t adv">Argentina<span class="sc">3</span></span><span class="t">Kap Verde<span class="sc">2</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#88</span><span class="t">Australien<span class="sc">1 (2)</span></span><span class="t adv">Egypten<span class="sc">1 (4)</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#85</span><span class="t adv">Schweiz<span class="sc">2</span></span><span class="t">Algeriet<span class="sc">0</span></span></div></div>
-<div class="cell"><div class="match"><span class="num">#87</span><span class="t">Colombia</span><span class="t">Ghana</span></div></div>
+<div class="cell"><div class="match"><span class="num">#87</span><span class="t adv">Colombia<span class="sc">1</span></span><span class="t">Ghana<span class="sc">0</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">1/8</div><div class="body">
 <div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t">Frankrig</span></div></div>
 <div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada</span><span class="t">Marokko</span></div></div>
-<div class="cell"><div class="match"><span class="num">#93</span><span class="t tbd">V83</span><span class="t tbd">V84</span></div></div>
+<div class="cell"><div class="match"><span class="num">#93</span><span class="t">Portugal</span><span class="t">Spanien</span></div></div>
 <div class="cell"><div class="match"><span class="num">#94</span><span class="t">USA</span><span class="t">Belgien</span></div></div>
 <div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien</span><span class="t">Norge</span></div></div>
 <div class="cell"><div class="match"><span class="num">#92</span><span class="t">Mexico</span><span class="t">England</span></div></div>
-<div class="cell"><div class="match"><span class="num">#95</span><span class="t tbd">V86</span><span class="t tbd">V88</span></div></div>
-<div class="cell"><div class="match"><span class="num">#96</span><span class="t tbd">V85</span><span class="t tbd">V87</span></div></div>
+<div class="cell"><div class="match"><span class="num">#95</span><span class="t">Argentina</span><span class="t">Egypten</span></div></div>
+<div class="cell"><div class="match"><span class="num">#96</span><span class="t">Schweiz</span><span class="t">Colombia</span></div></div>
 </div></div>
 <div class="round"><div class="head">Kvart</div><div class="body">
 <div class="cell"><div class="match"><span class="num">#97</span><span class="t tbd">V89</span><span class="t tbd">V90</span></div></div>
@@ -175,9 +175,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | SVT1  | 2.7 21:00  | 84  | Spanien - Østrig          | 3-0       |
 | DR    | 3.7 01:00  | 83  | Portugal - Kroatien       | 2-1       |
 | TV2   | 3.7 05:00  | 85  | Schweiz - Algeriet        | 2-0       |
-| DR    | 3.7 20:00  | 88  | Australien - Egypten      | –         |
-| DR    | 4.7 00:00  | 86  | Argentina - Kap Verde     | –         |
-| SVT1  | 4.7 03:30  | 87  | Colombia - Ghana          | –         |
+| DR    | 3.7 20:00  | 88  | Australien - Egypten      | 1-1 (2-4) |
+| DR    | 4.7 00:00  | 86  | Argentina - Kap Verde     | 3-2       |
+| SVT1  | 4.7 03:30  | 87  | Colombia - Ghana          | 1-0       |
 
 # Ottendedelsfinaler
 
@@ -187,10 +187,10 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 | DR    | 4.7 23:00  | 89  | Paraguay - Frankrig | –        |
 | TV2   | 5.7 22:00  | 91  | Brasilien - Norge   | –        |
 | DR    | 6.7 02:00  | 92  | Mexico - England    | –        |
-| DR    | 6.7 21:00  | 93  | V83 - V84           | –        |
+| DR    | 6.7 21:00  | 93  | Portugal - Spanien  | –        |
 | TV2   | 7.7 02:00  | 94  | USA - Belgien       | –        |
-| TV2   | 7.7 18:00  | 95  | V86 - V88           | –        |
-| DR    | 7.7 22:00  | 96  | V85 - V87           | –        |
+| TV2   | 7.7 18:00  | 95  | Argentina - Egypten | –        |
+| DR    | 7.7 22:00  | 96  | Schweiz - Colombia  | –        |
 
 # Kvartfinaler
 
