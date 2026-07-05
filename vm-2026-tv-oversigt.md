@@ -134,19 +134,19 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#87</span><span class="t adv">Colombia<span class="sc">1</span></span><span class="t">Ghana<span class="sc">0</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">1/8</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay</span><span class="t">Frankrig</span></div></div>
-<div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada</span><span class="t">Marokko</span></div></div>
+<div class="cell"><div class="match"><span class="num">#89</span><span class="t">Paraguay<span class="sc">0</span></span><span class="t adv">Frankrig<span class="sc">1</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#90</span><span class="t">Canada<span class="sc">0</span></span><span class="t adv">Marokko<span class="sc">3</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#93</span><span class="t">Portugal</span><span class="t">Spanien</span></div></div>
 <div class="cell"><div class="match"><span class="num">#94</span><span class="t">USA</span><span class="t">Belgien</span></div></div>
-<div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien</span><span class="t">Norge</span></div></div>
+<div class="cell"><div class="match"><span class="num">#91</span><span class="t">Brasilien<span class="sc">1</span></span><span class="t adv">Norge<span class="sc">2</span></span></div></div>
 <div class="cell"><div class="match"><span class="num">#92</span><span class="t">Mexico</span><span class="t">England</span></div></div>
 <div class="cell"><div class="match"><span class="num">#95</span><span class="t">Argentina</span><span class="t">Egypten</span></div></div>
 <div class="cell"><div class="match"><span class="num">#96</span><span class="t">Schweiz</span><span class="t">Colombia</span></div></div>
 </div></div>
 <div class="round"><div class="head">Kvart</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#97</span><span class="t tbd">V89</span><span class="t tbd">V90</span></div></div>
+<div class="cell"><div class="match"><span class="num">#97</span><span class="t tbd">Frankrig</span><span class="t tbd">Marokko</span></div></div>
 <div class="cell"><div class="match"><span class="num">#98</span><span class="t tbd">V93</span><span class="t tbd">V94</span></div></div>
-<div class="cell"><div class="match"><span class="num">#99</span><span class="t tbd">V91</span><span class="t tbd">V92</span></div></div>
+<div class="cell"><div class="match"><span class="num">#99</span><span class="t tbd">Norge</span><span class="t tbd">V92</span></div></div>
 <div class="cell"><div class="match"><span class="num">#100</span><span class="t tbd">V95</span><span class="t tbd">V96</span></div></div>
 </div></div>
 <div class="round"><div class="head">Semi</div><div class="body">
@@ -183,9 +183,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 
 | Kanal | Tid        | Nr. | Kamp                | Resultat |
 |:-----:|-----------:|:---:|---------------------|:--------:|
-| TV2   | 4.7 19:00  | 90  | Canada - Marokko    | –        |
-| DR    | 4.7 23:00  | 89  | Paraguay - Frankrig | –        |
-| TV2   | 5.7 22:00  | 91  | Brasilien - Norge   | –        |
+| TV2   | 4.7 19:00  | 90  | Canada - Marokko    | 0-3      |
+| DR    | 4.7 23:00  | 89  | Paraguay - Frankrig | 0-1      |
+| TV2   | 5.7 22:00  | 91  | Brasilien - Norge   | 1-2      |
 | DR    | 6.7 02:00  | 92  | Mexico - England    | –        |
 | DR    | 6.7 21:00  | 93  | Portugal - Spanien  | –        |
 | TV2   | 7.7 02:00  | 94  | USA - Belgien       | –        |
@@ -196,9 +196,9 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 
 | Kanal | Tid         | Nr. | Kamp      | Resultat |
 |:-----:|------------:|:---:|-----------|:--------:|
-| ?     | 9.7 22:00   | 97  | V89 - V90 | –        |
+| ?     | 9.7 22:00   | 97  | Frankrig - Marokko | –        |
 | ?     | 10.7 21:00  | 98  | V93 - V94 | –        |
-| ?     | 11.7 23:00  | 99  | V91 - V92 | –        |
+| ?     | 11.7 23:00  | 99  | Norge - V92 | –        |
 | ?     | 12.7 03:00  | 100 | V95 - V96 | –        |
 
 # Semifinaler
