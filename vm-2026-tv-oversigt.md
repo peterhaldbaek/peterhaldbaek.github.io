@@ -144,14 +144,14 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#96</span><span class="t adv">Schweiz<span class="sc">0 (4)</span></span><span class="t">Colombia<span class="sc">0 (3)</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">Kvart</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#97</span><span class="t tbd">Frankrig</span><span class="t tbd">Marokko</span></div></div>
-<div class="cell"><div class="match"><span class="num">#98</span><span class="t tbd">Spanien</span><span class="t tbd">Belgien</span></div></div>
-<div class="cell"><div class="match"><span class="num">#99</span><span class="t tbd">Norge</span><span class="t tbd">England</span></div></div>
-<div class="cell"><div class="match"><span class="num">#100</span><span class="t tbd">Argentina</span><span class="t tbd">Schweiz</span></div></div>
+<div class="cell"><div class="match"><span class="num">#97</span><span class="t adv">Frankrig<span class="sc">2</span></span><span class="t">Marokko<span class="sc">0</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#98</span><span class="t adv">Spanien<span class="sc">2</span></span><span class="t">Belgien<span class="sc">1</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#99</span><span class="t">Norge<span class="sc">1</span></span><span class="t adv">England<span class="sc">2</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#100</span><span class="t adv">Argentina<span class="sc">3</span></span><span class="t">Schweiz<span class="sc">1</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">Semi</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#101</span><span class="t tbd">V97</span><span class="t tbd">V98</span></div></div>
-<div class="cell"><div class="match"><span class="num">#102</span><span class="t tbd">V99</span><span class="t tbd">V100</span></div></div>
+<div class="cell"><div class="match"><span class="num">#101</span><span class="t tbd">Frankrig</span><span class="t tbd">Spanien</span></div></div>
+<div class="cell"><div class="match"><span class="num">#102</span><span class="t tbd">England</span><span class="t tbd">Argentina</span></div></div>
 </div></div>
 <div class="round"><div class="head">Finale</div><div class="body">
 <div class="cell"><div class="match"><span class="num">#104</span><span class="t tbd">V101</span><span class="t tbd">V102</span></div></div>
@@ -196,17 +196,17 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 
 | Kanal | Tid         | Nr. | Kamp      | Resultat |
 |:-----:|------------:|:---:|-----------|:--------:|
-| TV2   | 9.7 22:00   | 97  | Frankrig - Marokko | –        |
-| DR    | 10.7 21:00  | 98  | Spanien - Belgien  | –        |
-| TV2   | 11.7 23:00  | 99  | Norge - England    | –        |
-| DR    | 12.7 03:00  | 100 | Argentina - Schweiz | –        |
+| TV2   | 9.7 22:00   | 97  | Frankrig - Marokko | 2-0      |
+| DR    | 10.7 21:00  | 98  | Spanien - Belgien  | 2-1      |
+| TV2   | 11.7 23:00  | 99  | Norge - England    | 1-2      |
+| DR    | 12.7 03:00  | 100 | Argentina - Schweiz | 3-1      |
 
 # Semifinaler
 
 | Kanal | Tid         | Nr. | Kamp       | Resultat |
 |:-----:|------------:|:---:|------------|:--------:|
-| ?     | 14.7 21:00  | 101 | V97 - V98  | –        |
-| ?     | 15.7 21:00  | 102 | V99 - V100 | –        |
+| DR    | 14.7 21:00  | 101 | Frankrig - Spanien   | –        |
+| TV2   | 15.7 21:00  | 102 | England - Argentina  | –        |
 
 # Bronzekamp
 
