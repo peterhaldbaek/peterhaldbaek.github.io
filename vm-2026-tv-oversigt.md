@@ -150,11 +150,11 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 <div class="cell"><div class="match"><span class="num">#100</span><span class="t adv">Argentina<span class="sc">3</span></span><span class="t">Schweiz<span class="sc">1</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">Semi</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#101</span><span class="t tbd">Frankrig</span><span class="t tbd">Spanien</span></div></div>
-<div class="cell"><div class="match"><span class="num">#102</span><span class="t tbd">England</span><span class="t tbd">Argentina</span></div></div>
+<div class="cell"><div class="match"><span class="num">#101</span><span class="t">Frankrig<span class="sc">0</span></span><span class="t adv">Spanien<span class="sc">2</span></span></div></div>
+<div class="cell"><div class="match"><span class="num">#102</span><span class="t">England<span class="sc">1</span></span><span class="t adv">Argentina<span class="sc">2</span></span></div></div>
 </div></div>
 <div class="round"><div class="head">Finale</div><div class="body">
-<div class="cell"><div class="match"><span class="num">#104</span><span class="t tbd">V101</span><span class="t tbd">V102</span></div></div>
+<div class="cell"><div class="match"><span class="num">#104</span><span class="t tbd">Spanien</span><span class="t tbd">Argentina</span></div></div>
 </div></div>
 </div></div>
 
@@ -205,17 +205,17 @@ Visuel oversigt over hele slutspillet. Hold markeret med <span style="color:var(
 
 | Kanal | Tid         | Nr. | Kamp       | Resultat |
 |:-----:|------------:|:---:|------------|:--------:|
-| DR    | 14.7 21:00  | 101 | Frankrig - Spanien   | –        |
-| TV2   | 15.7 21:00  | 102 | England - Argentina  | –        |
+| DR    | 14.7 21:00  | 101 | Frankrig - Spanien   | 0-2      |
+| TV2   | 15.7 21:00  | 102 | England - Argentina  | 1-2      |
 
 # Bronzekamp
 
 | Kanal | Tid         | Nr. | Kamp        | Resultat |
 |:-----:|------------:|:---:|-------------|:--------:|
-| DR    | 18.7 23:00  | 103 | T101 - T102 | –        |
+| DR    | 18.7 23:00  | 103 | Frankrig - England | –        |
 
 # Finale
 
 | Kanal | Tid         | Nr. | Kamp        | Resultat |
 |:-----:|------------:|:---:|-------------|:--------:|
-| DR    | 19.7 21:00  | 104 | V101 - V102 | –        |
+| DR    | 19.7 21:00  | 104 | Spanien - Argentina | –        |
